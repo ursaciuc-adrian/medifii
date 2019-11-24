@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediFII", "MediFII\MediFII.csproj", "{42DB4921-7C80-40AF-BDBB-85C04319682D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42DB4921-7C80-40AF-BDBB-85C04319682D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42DB4921-7C80-40AF-BDBB-85C04319682D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42DB4921-7C80-40AF-BDBB-85C04319682D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42DB4921-7C80-40AF-BDBB-85C04319682D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {340D722A-CF5F-4062-9087-9C30A3F79CDA}
+	EndGlobalSection
+EndGlobal
