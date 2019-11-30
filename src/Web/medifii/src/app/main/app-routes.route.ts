@@ -1,12 +1,16 @@
 import { Routes } from '@angular/router';
 export const APP_ROUTES: Routes = [
     {
-        path: 'iamlazy',
-        loadChildren: () => import('../lazy_module/lazy.module').then(m => m.LazyModule)
+        path: 'auth',
+        loadChildren: () => import('../lazy_module/login.module').then(m => m.LoginModule)
     },
+    // {
+    //     path: 'home',
+    //     loadChildren: () => import('../lazy_module/lazy.module').then(m => m.LazyModule)
+    // },
     {
         path: '',
-        redirectTo: '',
+        redirectTo: 'auth',
         pathMatch: 'full'
     }
 ];

@@ -1,23 +1,29 @@
 import { NgModule } from '@angular/core';
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule } from '@angular/material';
-import { FormsModule } from '@angular/forms';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatTabsModule, MatFormFieldModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
     ],
     imports: [
         FormsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
         MatInputModule,
         MatButtonModule,
         MatSelectModule,
-        MatIconModule
+        MatIconModule,
+        MatTabsModule,
     ],
     exports: [
         FormsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
         MatInputModule,
         MatButtonModule,
         MatSelectModule,
-        MatIconModule
+        MatIconModule,
+        MatTabsModule,
     ],
     providers: [],
     bootstrap: []
