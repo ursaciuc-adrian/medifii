@@ -1,10 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Medifii.ScraperService.Infrastructure\Medifii.ScraperService.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\..\Medifii.ScraperService.Scraper.Catena\Medifii.ScraperService.Scraper.Catena.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@
 	"ReRoutes": [
 		{
 			"DangerousAcceptAnyServerCertificateValidator": true,
-			"DownstreamPathTemplate": "/api/auth",
+			"DownstreamPathTemplate": "/api/products/{searchString}",
 			"DownstreamScheme": "https",
 			"DownstreamHostAndPorts": [
 				{
@@ -10,8 +10,8 @@
 					"Port": 7011
 				}
 			],
-			"UpstreamPathTemplate": "/api/auth",
-			"UpstreamHttpMethod": [ "GET", "POST" ]
+			"UpstreamPathTemplate": "/api/{searchString}",
+			"UpstreamHttpMethod": [ "GET" ]
 		}
 	],
 	"GlobalConfiguration": {
