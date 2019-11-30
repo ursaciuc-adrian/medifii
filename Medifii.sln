@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ApiGateway", "Src\Gateways\WebApi-Gateway\Medifii.ApiGateway.csproj", "{4A47470B-EC25-458B-853A-943B9DC75226}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.AuthService", "Src\Microservices\Auth-Service\Medifii.AuthService\Medifii.AuthService.csproj", "{5275364F-01A4-4F74-B780-7C470C254404}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{7581CA23-8E79-4E18-A02A-E3715C6B0609}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{402CFAF7-3F43-4E1B-A7B2-B49A2AED8289}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthService", "AuthService", "{36003DD3-6E91-4B7C-B7EF-70D735FAADAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScraperService", "ScraperService", "{085C2C2F-34AC-4CE7-BBB4-D22090382D33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ScraperService", "Src\Microservices\Scraper-Service\Medifii.ScraperService\Medifii.ScraperService.csproj", "{E8105D80-399F-4700-863B-F75F1D8BC1A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A47470B-EC25-458B-853A-943B9DC75226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A47470B-EC25-458B-853A-943B9DC75226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A47470B-EC25-458B-853A-943B9DC75226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A47470B-EC25-458B-853A-943B9DC75226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5275364F-01A4-4F74-B780-7C470C254404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5275364F-01A4-4F74-B780-7C470C254404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5275364F-01A4-4F74-B780-7C470C254404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5275364F-01A4-4F74-B780-7C470C254404}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8105D80-399F-4700-863B-F75F1D8BC1A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8105D80-399F-4700-863B-F75F1D8BC1A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8105D80-399F-4700-863B-F75F1D8BC1A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8105D80-399F-4700-863B-F75F1D8BC1A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A47470B-EC25-458B-853A-943B9DC75226} = {7581CA23-8E79-4E18-A02A-E3715C6B0609}
+		{5275364F-01A4-4F74-B780-7C470C254404} = {36003DD3-6E91-4B7C-B7EF-70D735FAADAD}
+		{36003DD3-6E91-4B7C-B7EF-70D735FAADAD} = {402CFAF7-3F43-4E1B-A7B2-B49A2AED8289}
+		{085C2C2F-34AC-4CE7-BBB4-D22090382D33} = {402CFAF7-3F43-4E1B-A7B2-B49A2AED8289}
+		{E8105D80-399F-4700-863B-F75F1D8BC1A5} = {085C2C2F-34AC-4CE7-BBB4-D22090382D33}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {340D722A-CF5F-4062-9087-9C30A3F79CDA}
+	EndGlobalSection
+EndGlobal

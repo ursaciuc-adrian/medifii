@@ -1,6 +1,6 @@
 using System;
 
-namespace MediFII
+namespace Medifii.ScraperService
 {
 	public class WeatherForecast
 	{

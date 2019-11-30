@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace MediFII.Controllers
+namespace Medifii.ScraperService.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
