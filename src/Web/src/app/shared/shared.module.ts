@@ -1,11 +1,14 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatTabsModule, MatFormFieldModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatTabsModule, MatFormFieldModule, MatGridListModule, MatCardModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
     ],
     imports: [
+        HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
         MatFormFieldModule,
@@ -14,6 +17,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         MatSelectModule,
         MatIconModule,
         MatTabsModule,
+        MatGridListModule,
+        MatCardModule,
+        CommonModule
     ],
     exports: [
         FormsModule,
@@ -24,8 +30,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         MatSelectModule,
         MatIconModule,
         MatTabsModule,
+        MatGridListModule,
+        MatCardModule,
+        CommonModule
     ],
-    providers: [],
+    providers: [HttpClient],
     bootstrap: []
 })
 export class SharedModule { }

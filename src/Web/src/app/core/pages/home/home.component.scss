@@ -1,0 +1,18 @@
+$card-max-width: 25rem;
+.med-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .med-card {
+    width: 100vw;
+    max-width: $card-max-width;
+    padding: 1rem;
+    margin: 1rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+}

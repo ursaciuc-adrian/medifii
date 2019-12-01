@@ -9,8 +9,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Medifii.ScraperService.Infrastructure\Medifii.ScraperService.Infrastructure.csproj" />
-    <ProjectReference Include="..\..\..\..\Medifii.ScraperService.Scraper.Catena\Medifii.ScraperService.Scraper.Catena.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="..\Medifii.ScraperService.Infrastructure\Medifii.ScraperService.Infrastructure.csproj" />
+    <ProjectReference Include="..\Medifii.ScraperService.Scraper.Catena\Medifii.ScraperService.Scraper.Catena.csproj" />
+  </ItemGroup>
 </Project>

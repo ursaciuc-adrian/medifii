@@ -1,3 +1,4 @@
+import { ScraperService } from './../../services/scraper.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   title = 'medifii';
+  meds;
+
+  constructor(private scraperService: ScraperService) {
+    this.scraperService.getMeds().then(rsp => {
+      this.meds = rsp;
+      console.log(this.meds);
+      
+    })
+  }
 }
