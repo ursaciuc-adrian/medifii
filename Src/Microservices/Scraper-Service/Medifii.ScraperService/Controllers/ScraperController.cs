@@ -27,5 +27,13 @@ namespace Medifii.ScraperService.Controllers
 
 			return Ok(await service.GetProducts(searchString));
 		}
-	}
+
+        [HttpGet("/tei")]
+        public async Task<IActionResult> GetTeiResults(string searchString)
+        {
+            IScraperService service = new Scraper.Tei.TeiService();
+
+            return Ok(await service.GetProducts(searchString));
+        }
+    }
 }
