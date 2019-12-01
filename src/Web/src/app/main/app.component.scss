@@ -1,0 +1,20 @@
+.header {
+    background-color: rgb(98, 202, 243);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+
+    & > p {
+        margin: 0;
+        font-size: 2rem;
+        color: white;
+        font-weight: bolder;
+
+        & > span {
+            font-size: 1.5rem;
+            font-style: italic;
+            font-weight: lighter;
+        }
+    }
+}
