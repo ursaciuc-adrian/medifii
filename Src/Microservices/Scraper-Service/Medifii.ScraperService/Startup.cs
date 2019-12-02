@@ -22,7 +22,17 @@ namespace Medifii.ScraperService
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddControllers();
-
+            services.AddCors(options =>
+            {
+                options.AddPolicy(AllowedOrigins, builder =>
+                        {
+                            builder.WithOrigins("http://localhost:4200")
+                                .AllowCredentials()
+                                .AllowAnyMethod()
+                                .AllowAnyHeader();
+                        });
+            });
+            services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
         }
 
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -31,6 +41,8 @@ namespace Medifii.ScraperService
 			{
 				app.UseDeveloperExceptionPage();
 			}
+
+            app.UseCors(AllowedOrigins);
 
             app.UseHttpsRedirection();
 
@@ -42,7 +54,9 @@ namespace Medifii.ScraperService
 			{
 				endpoints.MapControllers();
 			});
-           
+
+            app.UseMvc();
+
         }
 	}
 }
