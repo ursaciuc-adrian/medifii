@@ -9,9 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Medifii.ScraperService.Infrastructure\Medifii.ScraperService.Infrastructure.csproj" />
     <ProjectReference Include="..\Medifii.ScraperService.Scraper.Catena\Medifii.ScraperService.Scraper.Catena.csproj" />
+    <ProjectReference Include="..\Medifii.ScraperService.Scraper.Tei\Medifii.ScraperService.Scraper.Tei.csproj" />
   </ItemGroup>
 </Project>

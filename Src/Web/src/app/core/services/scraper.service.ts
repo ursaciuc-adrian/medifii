@@ -24,7 +24,7 @@ export class ScraperService {
                     console.error(err);
                     resolve(null);
                 }
-            )
-        })
+            );
+        });
     }
 }
