@@ -1,11 +1,8 @@
-﻿namespace Medifii.ScraperService.Infrastructure
-{
-	public enum Pharmacy
-	{
-		Catena
-	}
+﻿using Medifii.ScraperService.Infrastructure.Enums;
 
-	public class Product
+namespace Medifii.ScraperService.Infrastructure.Entities
+{
+    public class Product
 	{
 		public string Name { get; set; }
 		public string Url { get; set; }

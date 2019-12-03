@@ -1,24 +1,26 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Medifii.ScraperService.Infrastructure;
+
+using HtmlAgilityPack;
+
 using Medifii.ScraperService.Infrastructure.Entities;
 using Medifii.ScraperService.Infrastructure.Enums;
 using Medifii.ScraperService.Infrastructure.Scraper;
 
-namespace Medifii.ScraperService.Scraper.Tei
+namespace Medifii.ScraperService.Scrapers.Tei
 {
-    public class ScraperTei : MedifiiScraper<List<Product>>
+    internal class TeiScraper : MedifiiScraper<List<Product>>
     {
         public override async Task Init()
         {
             await this.Request("https://comenzi.farmaciatei.ro/search/coldrex");
         }
 
-        public override Task<List<Product>> Parse(Response response)
+        public override Task<List<Product>> Parse(HtmlDocument document)
         {
             var products = new List<Product>();
 
-            var productNodes = response.Document.DocumentNode.SelectNodes("//*/div/ul[@class='products-grid row']/li");
+            var productNodes = document.DocumentNode.SelectNodes("//*/div/ul[@class='products-grid row']/li");
 
             foreach (var productNode in productNodes)
             {

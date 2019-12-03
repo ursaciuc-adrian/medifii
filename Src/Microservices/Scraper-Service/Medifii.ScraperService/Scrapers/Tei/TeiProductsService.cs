@@ -1,18 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Medifii.ScraperService.Infrastructure;
+
 using Medifii.ScraperService.Infrastructure.Entities;
 using Medifii.ScraperService.Infrastructure.Interfaces;
 using Medifii.ScraperService.Infrastructure.Scraper;
 
-namespace Medifii.ScraperService.Scraper.Tei
+namespace Medifii.ScraperService.Scrapers.Tei
 {
-    public class TeiService : IScraperService
+    public class TeiProductsService : IProductsService
     {
         private readonly MedifiiScraper<List<Product>> _scraper;
-        public TeiService()
+
+        public TeiProductsService()
         {
-            _scraper = new ScraperTei();
+            _scraper = new TeiScraper();
         }
 
         public async Task<List<Product>> GetProducts(string searchString)

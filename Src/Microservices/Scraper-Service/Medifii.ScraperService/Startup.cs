@@ -1,3 +1,7 @@
+using AutoMapper;
+using Medifii.ScraperService.Infrastructure.Interfaces;
+using Medifii.ScraperService.Scrapers.Catena;
+using Medifii.ScraperService.Scrapers.Tei;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -22,6 +26,8 @@ namespace Medifii.ScraperService
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddControllers();
+            services.AddAutoMapper(typeof(Startup));
+
             services.AddCors(options =>
             {
                 options.AddPolicy(AllowedOrigins, builder =>
@@ -32,10 +38,16 @@ namespace Medifii.ScraperService
                                 .AllowAnyHeader();
                         });
             });
-            services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+
+            services.AddMvc(option => option.EnableEndpointRouting = false)
+                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
+                .AddNewtonsoftJson();
+
+            services.AddTransient<IProductsService, CatenaProductsService>();
+            services.AddTransient<IProductsService, TeiProductsService>();
         }
 
-		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			if (env.IsDevelopment())
 			{
@@ -56,7 +68,6 @@ namespace Medifii.ScraperService
 			});
 
             app.UseMvc();
-
         }
 	}
 }

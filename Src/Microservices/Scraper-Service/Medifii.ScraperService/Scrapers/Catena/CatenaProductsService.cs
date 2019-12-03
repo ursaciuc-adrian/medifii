@@ -1,19 +1,21 @@
-﻿using Medifii.ScraperService.Infrastructure;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+
+using Medifii.ScraperService.Infrastructure.Entities;
 using Medifii.ScraperService.Infrastructure.Interfaces;
 using Medifii.ScraperService.Infrastructure.Scraper;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Medifii.ScraperService.Infrastructure.Entities;
 
-namespace Medifii.ScraperService.Scraper.Catena
+namespace Medifii.ScraperService.Scrapers.Catena
 {
-	public class ScraperService : IScraperService
+	public class CatenaProductsService : IProductsService
 	{
 		private readonly MedifiiScraper<List<Product>> _scraper;
-		public ScraperService()
+
+		public CatenaProductsService()
 		{
 			_scraper = new CatenaScraper();
 		}
+
 		public async Task<List<Product>> GetProducts(string searchString)
 		{
 			return (await _scraper.Start()).Result;

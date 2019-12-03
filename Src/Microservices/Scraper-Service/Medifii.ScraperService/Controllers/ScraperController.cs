@@ -1,39 +1,40 @@
-﻿using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using HtmlAgilityPack;
+﻿using AutoMapper;
 using Medifii.ScraperService.Infrastructure;
 using Medifii.ScraperService.Infrastructure.Interfaces;
+using Medifii.ScraperService.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Medifii.ScraperService.Infrastructure.Entities;
 
 namespace Medifii.ScraperService.Controllers
 {
-	[ApiController]
+    [ApiController]
 	[Route("[controller]")]
 	public class ScraperController : ControllerBase
 	{
-		private readonly ILogger<ScraperController> _logger;
+        private readonly IEnumerable<IProductsService> _scraperServices;
+        private readonly IMapper _mapper;
 
-		public ScraperController(ILogger<ScraperController> logger)
-		{
-			_logger = logger;
-		}
+        public ScraperController(
+            IEnumerable<IProductsService> scraperServices, 
+            IMapper mapper)
+        {
+            _scraperServices = scraperServices;
+            _mapper = mapper;
+        }
 
 		[HttpGet]
 		public async Task<IActionResult> Index(string searchString)
 		{
-			IScraperService service = new Scraper.Catena.ScraperService();
+            var products = new List<Product>();
 
-			return Ok(await service.GetProducts(searchString));
+            foreach (var scraper in _scraperServices)
+            {
+                products.AddRange(await scraper.GetProducts(searchString));
+            }
+
+			return new JsonResult(_mapper.Map<List<ProductModel>>(products));
 		}
-
-        [HttpGet("/tei")]
-        public async Task<IActionResult> GetTeiResults(string searchString)
-        {
-            IScraperService service = new Scraper.Tei.TeiService();
-
-            return Ok(await service.GetProducts(searchString));
-        }
     }
 }

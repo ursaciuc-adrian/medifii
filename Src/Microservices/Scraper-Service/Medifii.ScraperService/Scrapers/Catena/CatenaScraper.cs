@@ -1,24 +1,26 @@
-﻿using Medifii.ScraperService.Infrastructure;
-using Medifii.ScraperService.Infrastructure.Scraper;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+
+using HtmlAgilityPack;
+
 using Medifii.ScraperService.Infrastructure.Entities;
 using Medifii.ScraperService.Infrastructure.Enums;
+using Medifii.ScraperService.Infrastructure.Scraper;
 
-namespace Medifii.ScraperService.Scraper.Catena
+namespace Medifii.ScraperService.Scrapers.Catena
 {
-	internal class CatenaScraper : MedifiiScraper<List<Product>>
+    internal class CatenaScraper : MedifiiScraper<List<Product>>
 	{
 		public override async Task Init()
 		{
 			await this.Request("https://www.catena.ro/cauta/aspirina");
 		}
 
-		public override Task<List<Product>> Parse(Response response)
+		public override Task<List<Product>> Parse(HtmlDocument document)
 		{
 			var products = new List<Product>();
 
-			var productNodes = response.Document.DocumentNode.SelectNodes("//*/div/ul[@class='searchedprods']/li");
+			var productNodes = document.DocumentNode.SelectNodes("//*/div/ul[@class='searchedprods']/li");
 
 			foreach (var productNode in productNodes)
 			{
