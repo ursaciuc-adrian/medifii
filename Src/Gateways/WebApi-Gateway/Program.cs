@@ -13,8 +13,6 @@ namespace Medifii.ApiGateway
 {
 	public class Program
 	{
-		private static readonly string AllowedOrigins = "allowedOrigins";
-
 		public static void Main(string[] args)
 		{
 			new WebHostBuilder()

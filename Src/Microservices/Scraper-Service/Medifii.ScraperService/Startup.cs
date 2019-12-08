@@ -15,8 +15,6 @@ namespace Medifii.ScraperService
 {
 	public class Startup
 	{
-		private readonly string AllowedOrigins = "allowedOrigins";
-
 		public Startup(IConfiguration configuration)
 		{
 			Configuration = configuration;
@@ -28,17 +26,6 @@ namespace Medifii.ScraperService
 		{
 			services.AddControllers();
 			services.AddAutoMapper(typeof(Startup));
-
-			//services.AddCors(options =>
-			//{
-			//	options.AddPolicy(AllowedOrigins, builder => 
-			//	{
-			//		builder.WithOrigins("http://localhost:7000", "https://localhost:7001")
-			//			.AllowCredentials()
-			//			.AllowAnyMethod()
-			//			.AllowAnyHeader();
-			//	});
-			//});
 
 			services.AddMvc(option => option.EnableEndpointRouting = false)
 				.SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
@@ -54,8 +41,6 @@ namespace Medifii.ScraperService
 			{
 				app.UseDeveloperExceptionPage();
 			}
-
-			app.UseCors(AllowedOrigins);
 
 			app.UseHttpsRedirection();
 
