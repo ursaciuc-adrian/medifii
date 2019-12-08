@@ -1,20 +1,20 @@
 {
 	"ReRoutes": [
 		{
-			"DangerousAcceptAnyServerCertificateValidator": true,
-			"DownstreamPathTemplate": "/api/products/{searchString}",
-			"DownstreamScheme": "https",
+			"UpstreamPathTemplate": "/api/products/search/{searchString}",
+			"UpstreamHttpMethod": [ "GET" ],
+
+			"DownstreamPathTemplate": "/api/scraper?searchString={searchString}",
+			"DownstreamScheme": "http",
 			"DownstreamHostAndPorts": [
 				{
 					"Host": "localhost",
-					"Port": 7011
+					"Port": 7020
 				}
-			],
-			"UpstreamPathTemplate": "/api/{searchString}",
-			"UpstreamHttpMethod": [ "GET" ]
+			]
 		}
 	],
 	"GlobalConfiguration": {
-		"BaseUrl":  "https://localhost:7001"
+		"BaseUrl": "http://localhost:7000"
 	}
 }
