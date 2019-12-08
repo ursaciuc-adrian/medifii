@@ -9,6 +9,10 @@ export const APP_ROUTES: Routes = [
         loadChildren: () => import('../core/core.module').then(m => m.CoreModule)
     },
     {
+        path: 'map',
+        loadChildren: () => import('../map/map.module').then(m => m.MapModule)
+    },
+    {
         path: '',
         redirectTo: 'app',
         pathMatch: 'full'
