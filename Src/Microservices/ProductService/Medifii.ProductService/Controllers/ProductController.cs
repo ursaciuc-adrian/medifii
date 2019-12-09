@@ -1,9 +1,7 @@
-﻿using Medifii.ProductService.Business.Services.Interfaces;
+﻿using Medifii.ProductService.Business.Models;
+using Medifii.ProductService.Business.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Medifii.ProductService.Controllers
 {
@@ -16,6 +14,11 @@ namespace Medifii.ProductService.Controllers
             this.productService = productService;
         }
 
+        [HttpGet]
+        public IEnumerable<Product> GetAll()
+        {
+            return this.productService.GetAll();
+        }
 
     }
 }
