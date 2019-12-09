@@ -13,6 +13,10 @@ export const APP_ROUTES: Routes = [
         loadChildren: () => import('../map/map.module').then(m => m.MapModule)
     },
     {
+        path: 'products',
+        loadChildren: () => import('../products/products.module').then(m => m.ProductsModule)
+    },
+    {
         path: '',
         redirectTo: 'app',
         pathMatch: 'full'

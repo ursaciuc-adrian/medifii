@@ -1,0 +1,29 @@
+<mat-card>
+    <div class='progress-container'>
+        <img src='../../../../assets/pills.png' />
+        <mat-list>
+            <mat-list-item>Section 1</mat-list-item>
+            <mat-list-item>Section 2</mat-list-item>
+            <mat-list-item>Section 3</mat-list-item>
+            <mat-list-item>Section 4</mat-list-item>
+        </mat-list>
+    </div>
+    <div class='form-container'>
+        <mat-form-field>
+            <input matInput placeholder="Product name" type='text' />
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type='number' placeholder="Price" [min]="0" />
+            <mat-error>Price cannot be below 0.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="number" placeholder="Quantity" [min]="0" />
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Producer" />
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Expiry date" />
+        </mat-form-field>
+    </div>
+</mat-card>
