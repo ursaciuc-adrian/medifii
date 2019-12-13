@@ -5,16 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Ocelot" Version="13.8.0" />
-    <PackageReference Include="Ocelot.Provider.Consul" Version="13.8.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Microservices\ProductService\Medifii.ProductService.Infrastructure\Medifii.ProductService.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\..\Medifii.ProductService.Business\Medifii.ProductService.Business.csproj" />
+    <ProjectReference Include="..\Medifii.ProductService.Infrastructure\Medifii.ProductService.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
