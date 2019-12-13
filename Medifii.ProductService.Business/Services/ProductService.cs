@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Medifii.ProductService.Business.Mappers;
 using Medifii.ProductService.Business.Models;
 using Medifii.ProductService.Business.Services.Interfaces;
@@ -19,6 +17,11 @@ namespace Medifii.ProductService.Business.Services
         public IEnumerable<Product> GetAll()
         {
             return this.productRepository.GetAll().ToModel();
+        }
+
+        public void Add(Product product)
+        {
+            this.productRepository.Create(product.ToEntity());
         }
     }
 }

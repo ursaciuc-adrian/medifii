@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Medifii.ProductService.Infrastructure.Entities;
+﻿using Medifii.ProductService.Infrastructure.Entities;
 using Medifii.ProductService.Infrastructure.Mappings;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,7 +6,7 @@ namespace Medifii.ProductService.Infrastructure
 {
     public class ProductContext : DbContext
     {
-        public ProductContext(DbContextOptions options) : base(options)
+        public ProductContext(DbContextOptions<ProductContext> options) : base(options)
         { 
         }
 

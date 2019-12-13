@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 namespace Medifii.ProductService.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
         private readonly IProductService productService;
@@ -15,10 +17,15 @@ namespace Medifii.ProductService.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Product> GetAll()
+        public IActionResult GetAll()
         {
-            return this.productService.GetAll();
+            return Ok(this.productService.GetAll());
         }
 
+        [HttpPost]
+        public void AddProduct([FromBody] Product product)
+        {
+            productService.Add(product);
+        }
     }
 }

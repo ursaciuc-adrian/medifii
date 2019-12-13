@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Medifii.ProductService.Domain.Repositories;
+﻿using Medifii.ProductService.Domain.Repositories;
 using Medifii.ProductService.Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 

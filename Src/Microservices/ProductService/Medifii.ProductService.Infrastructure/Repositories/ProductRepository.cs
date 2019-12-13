@@ -17,5 +17,23 @@ namespace Medifii.ProductService.Infrastructure.Repositories
         {
             return context.Set<Product>();
         }
+
+        public void Create(Product product)
+        {
+            context.Set<Product>().Add(product);
+            context.SaveChanges();
+        }
+
+        public void Update(Product product)
+        {
+            context.Set<Product>().Update(product);
+            context.SaveChanges();
+        }
+
+        public void Delete(Product product)
+        {
+            context.Set<Product>().Remove(product);
+            context.SaveChanges();
+        }
     }
 }
