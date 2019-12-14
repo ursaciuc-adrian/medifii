@@ -25,9 +25,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ProductService.Infr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ProductService", "Src\Microservices\ProductService\Medifii.ProductService\Medifii.ProductService.csproj", "{5842CAFC-4C0B-40C7-8131-B96A6F2F02FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ProductService.Business", "Medifii.ProductService.Business\Medifii.ProductService.Business.csproj", "{849DB288-0E4F-4C14-8D4C-F3EFFD8BCBF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ProductService.Business", "Src\Microservices\ProductService\Medifii.ProductService.Business\Medifii.ProductService.Business.csproj", "{849DB288-0E4F-4C14-8D4C-F3EFFD8BCBF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ProductService.Domain", "Medifii.ProductService.Domain\Medifii.ProductService.Domain.csproj", "{09B0FC25-4BB6-49E4-A304-6B11FBFF8E30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ProductService.Domain", "Src\Microservices\ProductService\Medifii.ProductService.Domain\Medifii.ProductService.Domain.csproj", "{09B0FC25-4BB6-49E4-A304-6B11FBFF8E30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
