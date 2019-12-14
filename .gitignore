@@ -5,6 +5,7 @@
 
 #Custom added
 .DS_Store
+.idea
 
 # User-specific files
 *.rsuser
