@@ -18,7 +18,12 @@ namespace Medifii.ScraperService.Scrapers.Catena
 
 		public async Task<List<Product>> GetProducts(string searchString)
 		{
-			return (await _scraper.Start()).Result;
+			var options = new Options
+			{
+				Url = $"https://www.catena.ro/cauta/{searchString}"
+			};
+			
+			return (await _scraper.Start(options)).Result;
 		}
 	}
 }

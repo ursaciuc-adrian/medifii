@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Medifii.ScraperService.Infrastructure.Interfaces
 {
-    public interface IProductsService
+	public interface IProductsService
 	{
 		Task<List<Product>> GetProducts(string searchString);
 	}

@@ -4,20 +4,19 @@ using System.Threading.Tasks;
 
 namespace Medifii.ScraperService.Infrastructure.Scraper
 {
-    public class MedifiiScraper<T>
+	public class MedifiiScraper<T>
 		where T : class
 	{
-		public string Url { get; private set; }
-		public string BaseUrl => new Uri(Url).GetLeftPart(UriPartial.Authority);
 		public T Result { get; private set; }
 
-        public HtmlDocument Document { get; set; }
+		private HtmlDocument Document { get; set; }
+		public Options Options { get; set; }
 
-        public async Task<MedifiiScraper<T>> Start()
+		public async Task<MedifiiScraper<T>> Start(Options options)
 		{
-			await this.Init();
+			await this.Init(options);
 
-			if(this.Document == null)
+			if (this.Document == null)
 			{
 				throw new InvalidOperationException("Request not initialized");
 			}
@@ -27,21 +26,21 @@ namespace Medifii.ScraperService.Infrastructure.Scraper
 			return this;
 		}
 
-		public virtual Task Init()
+		protected virtual Task Init(Options options)
 		{
 			throw new NotImplementedException("Init method not implemented.");
 		}
 
-		public virtual Task<T> Parse(HtmlDocument document)
+		protected virtual Task<T> Parse(HtmlDocument document)
 		{
 			throw new NotImplementedException("Parse method not implemented");
 		}
 
-		protected async Task Request(string url)
+		protected async Task Request(Options options)
 		{
-			this.Url = url;
-
-            this.Document = await new HtmlWeb().LoadFromWebAsync(url);
-        }
+			this.Options = options;
+			
+			this.Document = await new HtmlWeb().LoadFromWebAsync(options.Url);
+		}
 	}
 }

@@ -7,18 +7,23 @@ using Medifii.ScraperService.Infrastructure.Scraper;
 
 namespace Medifii.ScraperService.Scrapers.Tei
 {
-    public class TeiProductsService : IProductsService
-    {
-        private readonly MedifiiScraper<List<Product>> _scraper;
+	public class TeiProductsService : IProductsService
+	{
+		private readonly MedifiiScraper<List<Product>> _scraper;
 
-        public TeiProductsService()
-        {
-            _scraper = new TeiScraper();
-        }
+		public TeiProductsService()
+		{
+			_scraper = new TeiScraper();
+		}
 
-        public async Task<List<Product>> GetProducts(string searchString)
-        {
-            return (await _scraper.Start()).Result;
-        }
-    }
+		public async Task<List<Product>> GetProducts(string searchString)
+		{
+			var options = new Options
+			{
+				Url = $"https://comenzi.farmaciatei.ro/search/{searchString}"
+			};
+			
+			return (await _scraper.Start(options)).Result;
+		}
+	}
 }
