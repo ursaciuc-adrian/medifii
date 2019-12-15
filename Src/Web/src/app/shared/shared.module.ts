@@ -1,6 +1,6 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatTabsModule, MatFormFieldModule, MatGridListModule, MatCardModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatTabsModule, MatFormFieldModule, MatGridListModule, MatCardModule, MatTableModule, MatDialogModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 import { MatListModule } from '@angular/material/list';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -21,6 +21,10 @@ import { CommonModule } from '@angular/common';
         MatGridListModule,
         MatCardModule,
         MatListModule,
+        MatTableModule,
+        MatDialogModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
         CommonModule
     ],
     exports: [
@@ -35,6 +39,10 @@ import { CommonModule } from '@angular/common';
         MatGridListModule,
         MatCardModule,
         MatListModule,
+        MatTableModule,
+        MatDialogModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
         CommonModule
     ],
     providers: [HttpClient],

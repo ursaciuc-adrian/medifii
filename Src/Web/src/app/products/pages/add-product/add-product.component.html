@@ -1,29 +1,51 @@
-<mat-card>
-    <div class='progress-container'>
-        <img src='../../../../assets/pills.png' />
-        <mat-list>
-            <mat-list-item>Section 1</mat-list-item>
-            <mat-list-item>Section 2</mat-list-item>
-            <mat-list-item>Section 3</mat-list-item>
-            <mat-list-item>Section 4</mat-list-item>
-        </mat-list>
-    </div>
-    <div class='form-container'>
+<h1 mat-dialog-title>{{isEdit? 'Edit product': 'Add product'}}</h1>
+<div mat-dialog-content>
+    <form [formGroup]="productForm">
         <mat-form-field>
-            <input matInput placeholder="Product name" type='text' />
+            <input matInput placeholder="Product name" type='text' formControlName='name'>
+            <mat-error *ngIf="name.invalid && name.errors.required">This field is required.</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input matInput type='number' placeholder="Price" [min]="0" />
-            <mat-error>Price cannot be below 0.</mat-error>
+            <textarea matInput placeholder="Description" cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+                cdkAutoSizeMinRows="1" cdkAutoSizeMaxRows="5" formControlName='description'></textarea>
+            <mat-error *ngIf="description.invalid && description.errors.maxlength">You reached the maximum number of
+                characters.</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input matInput type="number" placeholder="Quantity" [min]="0" />
+            <input matInput type='number' placeholder="Price" formControlName='price'>
+            <mat-error *ngIf="price.invalid && price.errors.required">This field is required.</mat-error>
+            <mat-error *ngIf="price.invalid && price.errors.min">Price cannot be below 0.</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input matInput type="text" placeholder="Producer" />
+            <input matInput [matDatepicker]="picker" placeholder="Choose expiry date" formControlName="expiryDate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="expiryDate.invalid && expiryDate.errors.required">This field is required.</mat-error>
+            <mat-error *ngIf="expiryDate.invalid && expiryDate.errors.previousDate">Date cannot be before today.</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input matInput type="text" placeholder="Expiry date" />
+            <input matInput type="number" placeholder="Quantity" formControlName='quantity'>
+            <mat-error *ngIf="quantity.invalid && quantity.errors.required">This field is required.</mat-error>
+            <mat-error *ngIf="quantity.invalid && quantity.errors.min">You have to add at least 1 product.</mat-error>
         </mat-form-field>
-    </div>
-</mat-card>
+        <mat-form-field>
+            <mat-select formControlName='deliveryOptions' placeholder="Choose type of delivery">
+                <mat-option *ngFor='let delivery of deliverySelections' [value]="delivery">{{delivery}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="deliveryOptions.invalid && deliveryOptions.errors.required">This field is required.
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select formControlName='availability' placeholder="Choose availability">
+                <mat-option value="On stock">On stock</mat-option>
+                <mat-option value="Out of stock">Out of stock</mat-option>
+            </mat-select>
+            <mat-error *ngIf="availability.invalid && availability.errors.required">This field is required.</mat-error>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close color="primary">Close</button>
+    <button mat-raised-button color="primary" (click)="submit()" [disabled]="productForm.invalid">Submit
+        </button>
+</div>
