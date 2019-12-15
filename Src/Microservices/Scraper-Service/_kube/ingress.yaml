@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: api-gateway
+  namespace: medifii
+spec:
+  rules:
+    - host: www.medifii.local
+      http:
+        paths:
+          - backend:
+              serviceName: api-gateway
+              servicePort: 8080
+            path: /
