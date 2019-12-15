@@ -13,8 +13,4 @@
     <PackageReference Include="Ocelot.Provider.Consul" Version="13.8.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Microservices\ProductService\Medifii.ProductService.Infrastructure\Medifii.ProductService.Infrastructure.csproj" />
-  </ItemGroup>
-
 </Project>
