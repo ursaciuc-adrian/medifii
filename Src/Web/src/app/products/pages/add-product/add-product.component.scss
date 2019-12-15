@@ -1,0 +1,11 @@
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 360px;
+}
+.mat-dialog-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 10px 0;
+}
