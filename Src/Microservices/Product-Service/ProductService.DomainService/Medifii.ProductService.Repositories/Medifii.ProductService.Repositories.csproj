@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ProductService.DomainModel\Medifii.ProductService.Data\Medifii.ProductService.Data.csproj" />
+    <ProjectReference Include="..\..\ProductService.DomainModel\Medifii.ProductService.Persistance\Medifii.ProductService.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
