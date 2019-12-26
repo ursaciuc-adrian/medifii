@@ -10,13 +10,10 @@ namespace Medifii.PharmacyService.Persistence
 
         public DbSet<Pharmacy> Pharmacies { get; set; }
 
-        public DbSet<PharmacyProducts> PharmacyProducts { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             new PharmacyMapping().Configure(modelBuilder.Entity<Pharmacy>());
-            new PharmacyProductsMapping().Configure(modelBuilder.Entity<PharmacyProducts>());
         }
     }
 }

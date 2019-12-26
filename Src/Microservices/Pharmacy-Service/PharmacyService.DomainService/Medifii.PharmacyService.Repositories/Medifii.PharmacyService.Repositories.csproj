@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\PharmacyService.DomainModel\Medifii.PharmacyService.Data\Medifii.PharmacyService.Data.csproj" />
+    <ProjectReference Include="..\..\PharmacyService.DomainModel\Medifii.PharmacyService.Persistence\Medifii.PharmacyService.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>

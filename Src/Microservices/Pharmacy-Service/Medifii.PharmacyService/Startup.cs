@@ -1,4 +1,7 @@
+using Medifii.PharmacyService.Data.RepositoryInterfaces;
 using Medifii.PharmacyService.Persistence;
+using Medifii.PharmacyService.Repositories.Repositories;
+using Medifii.PharmacyService.Repositories.ServiceInterfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +29,10 @@ namespace Medifii.PharmacyService
             services.AddControllers();
 
             services.AddDbContext<PharmacyContext>(options => options.UseSqlServer(connectionString));
+            
+            services.AddTransient<IPharmacyService, Services.Services.PharmacyService>();
+
+            services.AddScoped<IPharmacyRepository, PharmacyRepository>();
 
             services.AddSwaggerGen(c =>
             {

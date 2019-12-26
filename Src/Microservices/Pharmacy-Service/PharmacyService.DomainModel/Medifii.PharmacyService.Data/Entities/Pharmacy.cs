@@ -1,15 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
+using CSharpFunctionalExtensions;
 using Medifii.PharmacyService.Data.ValueObjects;
 
 namespace Medifii.PharmacyService.Data.Entities
 {
     public class Pharmacy
     {
-        public Guid Id { get; set; }
+        protected Pharmacy(Guid id, Name name)
+        {
+            Id = id;
+            Name = name;
+        }
 
-        public Name Name { get; set; }
+        protected Pharmacy() { }
 
-        public List<PharmacyProducts> Products { get; set; }
+        public Guid Id { get; private set; }
+
+        public Name Name { get; private set; }
+
+        public static Result<Pharmacy> Create(string name)
+        {
+            var id = Guid.NewGuid();
+            var nameResult = Name.Create(name);
+
+            return Result.Combine(nameResult).Map(() => new Pharmacy(id, nameResult.Value));
+        }
+
+        public Result Update(string name)
+        {
+            var nameResult = Name.Create(name);
+
+            return Result.Combine(nameResult).Tap(() => { Name = nameResult.Value; });
+        }
     }
 }

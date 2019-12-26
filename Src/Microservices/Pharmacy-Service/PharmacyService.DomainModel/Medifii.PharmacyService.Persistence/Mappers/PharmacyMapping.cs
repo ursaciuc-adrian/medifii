@@ -10,7 +10,6 @@ namespace Medifii.PharmacyService.Persistence.Mappers
         {
             builder.HasKey(ph => ph.Id);
             builder.OwnsOne(ph => ph.Name, prop => prop.Property(x  => x.Value));
-            builder.Ignore(ph => ph.Products);
         }
     }
 }
