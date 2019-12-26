@@ -18,13 +18,13 @@ namespace Medifii.ProductService.Data.Entities
         {
         }
 
-        public Guid Id { get; set; }
+        public Guid Id { get; private set; }
 
-        public Name Name { get; set; }
+        public Name Name { get; private set; }
 
-        public Text Description { get; set; }
+        public Text Description { get; private set; }
 
-        public Price Price { get; set; }
+        public Price Price { get; private set; }
 
         public static Result<Product> Create(string name, string description, float price)
         {
