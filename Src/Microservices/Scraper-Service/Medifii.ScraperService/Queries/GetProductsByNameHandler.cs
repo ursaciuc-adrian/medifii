@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Medifii.ScraperService.Infrastructure.Entities;
+using Medifii.ScraperService.Infrastructure.Dto;
 using Medifii.ScraperService.Infrastructure.Interfaces;
 using Medifii.ScraperService.Infrastructure.Queries;
 
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Medifii.ScraperService.Api.Queries
 {
-	public class GetProductsByNameHandler : IRequestHandler<GetProductsByNameQuery, IEnumerable<Product>>
+	public class GetProductsByNameHandler : IRequestHandler<GetProductsByNameQuery, IEnumerable<ProductDto>>
 	{
 		private readonly IEnumerable<IScraperService> _scraperServices;
 
@@ -19,9 +19,9 @@ namespace Medifii.ScraperService.Api.Queries
 			_scraperServices = scraperServices;
 		}
 
-		public async Task<IEnumerable<Product>> Handle(GetProductsByNameQuery request, CancellationToken cancellationToken)
+		public async Task<IEnumerable<ProductDto>> Handle(GetProductsByNameQuery request, CancellationToken cancellationToken)
 		{
-			var products = new List<Product>();
+			var products = new List<ProductDto>();
 
 			foreach (var scraper in _scraperServices)
 			{

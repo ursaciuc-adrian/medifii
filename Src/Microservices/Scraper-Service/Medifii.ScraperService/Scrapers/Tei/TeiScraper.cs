@@ -3,22 +3,22 @@ using System.Threading.Tasks;
 
 using HtmlAgilityPack;
 
-using Medifii.ScraperService.Infrastructure.Entities;
+using Medifii.ScraperService.Infrastructure.Dto;
 using Medifii.ScraperService.Infrastructure.Enums;
 using Medifii.ScraperService.Infrastructure.Scraper;
 
 namespace Medifii.ScraperService.Scrapers.Tei
 {
-	internal class TeiScraper : MedifiiScraper<List<Product>>
+	internal class TeiScraper : MedifiiScraper<List<ProductDto>>
 	{
 		protected override async Task Init(Options options)
 		{
 			await this.Request(options);
 		}
 
-		protected override Task<List<Product>> Parse(HtmlDocument document)
+		protected override Task<List<ProductDto>> Parse(HtmlDocument document)
 		{
-			var products = new List<Product>();
+			var products = new List<ProductDto>();
 
 			var productNodes = document.DocumentNode.SelectNodes("//*/div/ul[@class='products-grid row']/li");
 
@@ -29,7 +29,7 @@ namespace Medifii.ScraperService.Scrapers.Tei
 			
 			foreach (var productNode in productNodes)
 			{
-				var product = new Product
+				var product = new ProductDto
 				{
 					Name = productNode.SelectSingleNode(".//div[@class='item-title']/a").InnerText,
 					Url = this.Options.BaseUrl + productNode.SelectSingleNode(".//div/a").GetAttributeValue("href", string.Empty),

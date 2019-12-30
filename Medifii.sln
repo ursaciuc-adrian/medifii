@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScraperService", "ScraperSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ScraperService.Api", "Src\Microservices\Scraper-Service\Medifii.ScraperService\Medifii.ScraperService.Api.csproj", "{E8105D80-399F-4700-863B-F75F1D8BC1A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ScraperService.Infrastructure", "Src\Microservices\Scraper-Service\Medifii.ScraperService.Infrastructure\Medifii.ScraperService.Infrastructure.csproj", "{C7A61A0A-9E73-4ECE-B103-95CC750C2AA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ScraperService", "Src\Microservices\Scraper-Service\Medifii.ScraperService.Infrastructure\Medifii.ScraperService.csproj", "{C7A61A0A-9E73-4ECE-B103-95CC750C2AA6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductService", "ProductService", "{AEDF8A24-C7A2-4442-AF29-26CD74CE5452}"
 EndProject
@@ -58,6 +58,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SearchService", "SearchService", "{00B3E1E4-209B-4E66-8E24-5F836C54E1A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.SearchService.Api", "Src\Microservices\Search-Service\Medifii.SearchService\Medifii.SearchService.Api\Medifii.SearchService.Api.csproj", "{BE3E7284-9930-4AAC-A47B-14F6C5639A06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ScraperService.Tests", "Src\Microservices\Scraper-Service\Medifii.ScraperService.Tests\Medifii.ScraperService.Tests.csproj", "{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -249,6 +251,18 @@ Global
 		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Release|x64.Build.0 = Release|Any CPU
 		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Release|x86.ActiveCfg = Release|Any CPU
 		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Release|x86.Build.0 = Release|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Debug|x64.Build.0 = Debug|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Debug|x86.Build.0 = Debug|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Release|x64.ActiveCfg = Release|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Release|x64.Build.0 = Release|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Release|x86.ActiveCfg = Release|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -280,6 +294,7 @@ Global
 		{D66DA550-5312-4E3F-85BD-6F5ED2A93F9F} = {FD5F8EC5-00A2-4E44-99BE-50B4AE831E8C}
 		{00B3E1E4-209B-4E66-8E24-5F836C54E1A6} = {402CFAF7-3F43-4E1B-A7B2-B49A2AED8289}
 		{BE3E7284-9930-4AAC-A47B-14F6C5639A06} = {00B3E1E4-209B-4E66-8E24-5F836C54E1A6}
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B} = {085C2C2F-34AC-4CE7-BBB4-D22090382D33}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {340D722A-CF5F-4062-9087-9C30A3F79CDA}

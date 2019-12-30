@@ -1,4 +1,4 @@
-﻿using Medifii.ScraperService.Infrastructure.Entities;
+﻿using Medifii.ScraperService.Infrastructure.Dto;
 
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -7,6 +7,6 @@ namespace Medifii.ScraperService.Infrastructure.Interfaces
 {
 	public interface IScraperService
 	{
-		Task<List<Product>> GetProducts(string searchString);
+		Task<List<ProductDto>> GetProducts(string searchString);
 	}
 }

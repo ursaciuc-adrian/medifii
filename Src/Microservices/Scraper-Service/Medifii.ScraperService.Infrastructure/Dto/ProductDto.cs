@@ -1,8 +1,8 @@
 ﻿using Medifii.ScraperService.Infrastructure.Enums;
 
-namespace Medifii.ScraperService.Infrastructure.Entities
+namespace Medifii.ScraperService.Infrastructure.Dto
 {
-    public class Product
+	public class ProductDto
 	{
 		public string Name { get; set; }
 		public string Url { get; set; }
