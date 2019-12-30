@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Medifii.ScraperService.Infrastructure;
 using Medifii.ScraperService.Infrastructure.Interfaces;
 using Medifii.ScraperService.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -35,6 +34,13 @@ namespace Medifii.ScraperService.Controllers
 			}
 
 			return new JsonResult(_mapper.Map<List<ProductModel>>(products));
+		}
+
+		[HttpGet]
+		[Route("test")]
+		public string GetTest(string searchString)
+		{
+			return "You searched for: " + searchString;
 		}
 	}
 }
