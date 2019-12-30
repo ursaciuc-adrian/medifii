@@ -1,5 +1,5 @@
 using AutoMapper;
-
+using MediatR;
 using Medifii.ScraperService.Infrastructure.Interfaces;
 using Medifii.ScraperService.Scrapers.Catena;
 using Medifii.ScraperService.Scrapers.Tei;
@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Reflection;
 
 namespace Medifii.ScraperService
 {
@@ -31,8 +32,10 @@ namespace Medifii.ScraperService
 				.SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
 				.AddNewtonsoftJson();
 
-			services.AddTransient<IProductsService, CatenaProductsService>();
-			services.AddTransient<IProductsService, TeiProductsService>();
+			services.AddTransient<IScraperService, CatenaProductsService>();
+			services.AddTransient<IScraperService, TeiProductsService>();
+
+			services.AddMediatR(Assembly.GetExecutingAssembly());
 		}
 
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

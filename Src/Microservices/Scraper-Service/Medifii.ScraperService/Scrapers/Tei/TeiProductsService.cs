@@ -7,7 +7,7 @@ using Medifii.ScraperService.Infrastructure.Scraper;
 
 namespace Medifii.ScraperService.Scrapers.Tei
 {
-	public class TeiProductsService : IProductsService
+	public class TeiProductsService : IScraperService
 	{
 		private readonly MedifiiScraper<List<Product>> _scraper;
 

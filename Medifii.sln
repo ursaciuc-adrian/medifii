@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthService", "AuthService"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScraperService", "ScraperService", "{085C2C2F-34AC-4CE7-BBB4-D22090382D33}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ScraperService", "Src\Microservices\Scraper-Service\Medifii.ScraperService\Medifii.ScraperService.csproj", "{E8105D80-399F-4700-863B-F75F1D8BC1A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ScraperService.Api", "Src\Microservices\Scraper-Service\Medifii.ScraperService\Medifii.ScraperService.Api.csproj", "{E8105D80-399F-4700-863B-F75F1D8BC1A5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ScraperService.Infrastructure", "Src\Microservices\Scraper-Service\Medifii.ScraperService.Infrastructure\Medifii.ScraperService.Infrastructure.csproj", "{C7A61A0A-9E73-4ECE-B103-95CC750C2AA6}"
 EndProject
