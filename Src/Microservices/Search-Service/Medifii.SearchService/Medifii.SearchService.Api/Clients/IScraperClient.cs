@@ -9,8 +9,8 @@ namespace Medifii.SearchService.Api.Clients
 {
 	public interface IScraperClient
 	{
-		[Get]
-		Task<List<Product>> GetProductsAsync([Query] string searchString);
+		[Get("{name}")]
+		Task<List<Product>> GetProductsAsync([Path] string name);
 	}
 
 	public class ScraperClient : IScraperClient
@@ -27,9 +27,9 @@ namespace Medifii.SearchService.Api.Clients
 			_client = RestClient.For<IScraperClient>(httpClient);
 		}
 
-		public async Task<List<Product>> GetProductsAsync([Query] string searchString)
+		public async Task<List<Product>> GetProductsAsync([Query] string name)
 		{
-			return await _client.GetProductsAsync(searchString);
+			return await _client.GetProductsAsync(name);
 		}
 	}
 }
