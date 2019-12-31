@@ -1,4 +1,5 @@
-﻿using Medifii.SearchService.Dto;
+﻿using Medifii.ScraperService.Infrastructure.Queries;
+using Medifii.SearchService.Dto;
 using Medifii.SearchService.Interfaces;
 using Medifii.SearchService.Queries;
 using RestEase;
@@ -23,7 +24,7 @@ namespace Medifii.SearchService.Api.Clients
 			_client = RestClient.For<IScraperClient>(httpClient);
 		}
 
-		public async Task<List<ProductDto>> GetProductsAsync([Body] SearchProductsQuery query)
+		public async Task<List<ProductDto>> GetProductsAsync([Body] GetProductsByNameQuery query)
 		{
 			return await _client.GetProductsAsync(query);
 		}
