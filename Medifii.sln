@@ -71,6 +71,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ReservationService.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.NotificationService.Api", "Src\Microservices\Notification-Service\Medifii.NotificationService.Api\Medifii.NotificationService.Api.csproj", "{968963D5-F48A-4039-9726-032103F16B48}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RequestService", "RequestService", "{E9C7166B-24D8-4817-9298-66E99679BFA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.RequestService.Api", "Src\Microservices\Request-Service\Medifii.RequestService.Api\Medifii.RequestService.Api.csproj", "{7D7650F5-E429-4AB3-A8C6-209EE09EB748}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -309,6 +313,18 @@ Global
 		{968963D5-F48A-4039-9726-032103F16B48}.Release|x64.Build.0 = Release|Any CPU
 		{968963D5-F48A-4039-9726-032103F16B48}.Release|x86.ActiveCfg = Release|Any CPU
 		{968963D5-F48A-4039-9726-032103F16B48}.Release|x86.Build.0 = Release|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Debug|x64.Build.0 = Debug|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Debug|x86.Build.0 = Debug|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|x64.ActiveCfg = Release|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|x64.Build.0 = Release|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|x86.ActiveCfg = Release|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -346,6 +362,8 @@ Global
 		{B3394367-B190-4CDB-8428-95DF208216D6} = {402CFAF7-3F43-4E1B-A7B2-B49A2AED8289}
 		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA} = {64BA40C5-495B-4CD5-A015-4A2504208273}
 		{968963D5-F48A-4039-9726-032103F16B48} = {B3394367-B190-4CDB-8428-95DF208216D6}
+		{E9C7166B-24D8-4817-9298-66E99679BFA4} = {402CFAF7-3F43-4E1B-A7B2-B49A2AED8289}
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748} = {E9C7166B-24D8-4817-9298-66E99679BFA4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {340D722A-CF5F-4062-9087-9C30A3F79CDA}
