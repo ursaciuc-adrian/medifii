@@ -1,15 +1,15 @@
 {
 	"ReRoutes": [
 		{
-			"UpstreamPathTemplate": "/api/products/search/{searchString}",
-			"UpstreamHttpMethod": [ "GET" ],
+			"UpstreamPathTemplate": "/api/products/search",
+			"UpstreamHttpMethod": [ "POST" ],
 
-			"DownstreamPathTemplate": "/api/scraper?searchString={searchString}",
+			"DownstreamPathTemplate": "/api/search",
 			"DownstreamScheme": "http",
 			"DownstreamHostAndPorts": [
 				{
 					"Host": "localhost",
-					"Port": 7020
+					"Port": 7040
 				}
 			]
 		}

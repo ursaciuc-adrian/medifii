@@ -15,7 +15,9 @@ export class ScraperService {
             if (this.meds) {
                 resolve(this.meds);
             }
-            this.http.get('http://localhost:7000/api/products/search/daee').toPromise().then(
+            this.http.post('http://localhost:7000/api/products/search', {
+                name: "aspirina"
+            }).toPromise().then(
                 (rsp) => {
                     this.meds = rsp;
                     resolve(this.meds);

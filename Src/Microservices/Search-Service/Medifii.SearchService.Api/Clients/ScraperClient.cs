@@ -1,7 +1,7 @@
 ﻿using Medifii.ScraperService.Infrastructure.Queries;
 using Medifii.SearchService.Dto;
 using Medifii.SearchService.Interfaces;
-using Medifii.SearchService.Queries;
+using Microsoft.Extensions.Configuration;
 using RestEase;
 using System;
 using System.Collections.Generic;
@@ -14,11 +14,11 @@ namespace Medifii.SearchService.Api.Clients
 	{
 		private readonly IScraperClient _client;
 
-		public ScraperClient()
+		public ScraperClient(IConfiguration configuration)
 		{
 			var httpClient = new HttpClient()
 			{
-				BaseAddress = new Uri("http://localhost:7020/api/scraper")
+				BaseAddress = new Uri(configuration.GetValue<string>("ScraperServiceUri"))
 			};
 
 			_client = RestClient.For<IScraperClient>(httpClient);
