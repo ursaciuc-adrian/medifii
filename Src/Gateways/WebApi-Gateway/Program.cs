@@ -1,12 +1,7 @@
-using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-
-using Ocelot.DependencyInjection;
-using Ocelot.Middleware;
+using Microsoft.Extensions.Hosting;
 
 namespace Medifii.ApiGateway
 {
@@ -14,9 +9,11 @@ namespace Medifii.ApiGateway
 	{
 		public static void Main(string[] args)
 		{
-			new WebHostBuilder()
-				.UseKestrel()
-				.UseContentRoot(Directory.GetCurrentDirectory())
+			CreateHostBuilder(args).Build().Run();
+		}
+
+		public static IHostBuilder CreateHostBuilder(string[] args) =>
+			Host.CreateDefaultBuilder(args)
 				.ConfigureAppConfiguration((hostingContext, config) =>
 				{
 					config
@@ -26,29 +23,9 @@ namespace Medifii.ApiGateway
 						.AddJsonFile("ocelot.json")
 						.AddEnvironmentVariables();
 				})
-				.ConfigureServices(s =>
+				.ConfigureWebHostDefaults(webBuilder =>
 				{
-					s.AddCors(options =>
-					{
-						options.AddPolicy("CorsPolicy",
-							builder => builder.AllowAnyOrigin()
-								.AllowAnyMethod()
-								.AllowAnyHeader());
-					});
-					s.AddOcelot();
-				})
-				.ConfigureLogging((hostingContext, logging) =>
-				{
-					logging.AddConsole();
-				})
-				.UseIISIntegration()
-				.Configure(app =>
-				{
-					app.UseCors("CorsPolicy");
-					app.UseOcelot().Wait();
-				})
-				.Build()
-				.Run();
-		}
+					webBuilder.UseStartup<Startup>();
+				});
 	}
 }

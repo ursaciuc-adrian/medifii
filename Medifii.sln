@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthService", "AuthService"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScraperService", "ScraperService", "{085C2C2F-34AC-4CE7-BBB4-D22090382D33}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ScraperService", "Src\Microservices\Scraper-Service\Medifii.ScraperService\Medifii.ScraperService.csproj", "{E8105D80-399F-4700-863B-F75F1D8BC1A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ScraperService.Api", "Src\Microservices\Scraper-Service\Medifii.ScraperService.Api\Medifii.ScraperService.Api.csproj", "{E8105D80-399F-4700-863B-F75F1D8BC1A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ScraperService.Infrastructure", "Src\Microservices\Scraper-Service\Medifii.ScraperService.Infrastructure\Medifii.ScraperService.Infrastructure.csproj", "{C7A61A0A-9E73-4ECE-B103-95CC750C2AA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ScraperService", "Src\Microservices\Scraper-Service\Medifii.ScraperService\Medifii.ScraperService.csproj", "{C7A61A0A-9E73-4ECE-B103-95CC750C2AA6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductService", "ProductService", "{AEDF8A24-C7A2-4442-AF29-26CD74CE5452}"
 EndProject
@@ -27,15 +27,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductService.DomainServic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductService.Business", "ProductService.Business", "{626EB991-0798-430D-8D1C-CCDD6311E7BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ProductService.Services", "Src\Microservices\Product-Service\ProductService.Business\Medifii.ProductService.Services\Medifii.ProductService.Services.csproj", "{2720F34A-D4EC-405E-B6F1-7D6EFD674F9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ProductService.Services", "Src\Microservices\Product-Service\ProductService.Business\Medifii.ProductService.Services\Medifii.ProductService.Services.csproj", "{2720F34A-D4EC-405E-B6F1-7D6EFD674F9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ProductService.Data", "Src\Microservices\Product-Service\ProductService.DomainModel\Medifii.ProductService.Data\Medifii.ProductService.Data.csproj", "{7EE74503-699F-46B5-857C-1B849DF4961B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ProductService.Data", "Src\Microservices\Product-Service\ProductService.DomainModel\Medifii.ProductService.Data\Medifii.ProductService.Data.csproj", "{7EE74503-699F-46B5-857C-1B849DF4961B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ProductService.Persistence", "Src\Microservices\Product-Service\ProductService.DomainModel\Medifii.ProductService.Persistance\Medifii.ProductService.Persistence.csproj", "{B01921CE-0A34-4298-A8C6-C7F846B75D19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ProductService.Persistence", "Src\Microservices\Product-Service\ProductService.DomainModel\Medifii.ProductService.Persistance\Medifii.ProductService.Persistence.csproj", "{B01921CE-0A34-4298-A8C6-C7F846B75D19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ProductService.Repositories", "Src\Microservices\Product-Service\ProductService.DomainService\Medifii.ProductService.Repositories\Medifii.ProductService.Repositories.csproj", "{8F1974F8-13FA-483D-A7D3-CDE095C0460E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ProductService.Repositories", "Src\Microservices\Product-Service\ProductService.DomainService\Medifii.ProductService.Repositories\Medifii.ProductService.Repositories.csproj", "{8F1974F8-13FA-483D-A7D3-CDE095C0460E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ProductService", "Src\Microservices\Product-Service\Medifii.ProductService\Medifii.ProductService.csproj", "{9831CA3C-C5F8-4AB5-8B4C-1867F7C0CCD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ProductService", "Src\Microservices\Product-Service\Medifii.ProductService\Medifii.ProductService.csproj", "{9831CA3C-C5F8-4AB5-8B4C-1867F7C0CCD6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PharmacyService", "PharmacyService", "{FD5F8EC5-00A2-4E44-99BE-50B4AE831E8C}"
 EndProject
@@ -45,15 +45,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PharmacyService.DomainModel
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PharmacyService.DomainService", "PharmacyService.DomainService", "{A6CD23A1-9C5F-45EC-9C46-D696C9F991D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.PharmacyService.Services", "Src\Microservices\Pharmacy-Service\PharmacyService.Business\Medifii.PharmacyService.Services\Medifii.PharmacyService.Services.csproj", "{95E5C397-95DB-49C4-B16F-92118F38B001}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.PharmacyService.Services", "Src\Microservices\Pharmacy-Service\PharmacyService.Business\Medifii.PharmacyService.Services\Medifii.PharmacyService.Services.csproj", "{95E5C397-95DB-49C4-B16F-92118F38B001}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.PharmacyService.Data", "Src\Microservices\Pharmacy-Service\PharmacyService.DomainModel\Medifii.PharmacyService.Data\Medifii.PharmacyService.Data.csproj", "{542590FC-DF86-4D2F-8747-87BEA5A4C696}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.PharmacyService.Data", "Src\Microservices\Pharmacy-Service\PharmacyService.DomainModel\Medifii.PharmacyService.Data\Medifii.PharmacyService.Data.csproj", "{542590FC-DF86-4D2F-8747-87BEA5A4C696}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.PharmacyService.Persistence", "Src\Microservices\Pharmacy-Service\PharmacyService.DomainModel\Medifii.PharmacyService.Persistence\Medifii.PharmacyService.Persistence.csproj", "{29E11CA5-BE7D-4974-A84D-18E3D65C1427}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.PharmacyService.Persistence", "Src\Microservices\Pharmacy-Service\PharmacyService.DomainModel\Medifii.PharmacyService.Persistence\Medifii.PharmacyService.Persistence.csproj", "{29E11CA5-BE7D-4974-A84D-18E3D65C1427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.PharmacyService.Repositories", "Src\Microservices\Pharmacy-Service\PharmacyService.DomainService\Medifii.PharmacyService.Repositories\Medifii.PharmacyService.Repositories.csproj", "{A444B127-5D5E-4ED1-80B6-0843116C0B9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.PharmacyService.Repositories", "Src\Microservices\Pharmacy-Service\PharmacyService.DomainService\Medifii.PharmacyService.Repositories\Medifii.PharmacyService.Repositories.csproj", "{A444B127-5D5E-4ED1-80B6-0843116C0B9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.PharmacyService", "Src\Microservices\Pharmacy-Service\Medifii.PharmacyService\Medifii.PharmacyService.csproj", "{D66DA550-5312-4E3F-85BD-6F5ED2A93F9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.PharmacyService", "Src\Microservices\Pharmacy-Service\Medifii.PharmacyService\Medifii.PharmacyService.csproj", "{D66DA550-5312-4E3F-85BD-6F5ED2A93F9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SearchService", "SearchService", "{00B3E1E4-209B-4E66-8E24-5F836C54E1A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.SearchService.Api", "Src\Microservices\Search-Service\Medifii.SearchService.Api\Medifii.SearchService.Api.csproj", "{BE3E7284-9930-4AAC-A47B-14F6C5639A06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ScraperService.Tests", "Src\Microservices\Scraper-Service\Medifii.ScraperService.Tests\Medifii.ScraperService.Tests.csproj", "{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.SearchService", "Src\Microservices\Search-Service\Medifii.SearchService\Medifii.SearchService.csproj", "{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReservationService", "ReservationService", "{64BA40C5-495B-4CD5-A015-4A2504208273}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NotificationService", "NotificationService", "{B3394367-B190-4CDB-8428-95DF208216D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ReservationService.Api", "Src\Microservices\Reservation-Service\Medifii.ReservationService.Api\Medifii.ReservationService.Api.csproj", "{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.NotificationService.Api", "Src\Microservices\Notification-Service\Medifii.NotificationService.Api\Medifii.NotificationService.Api.csproj", "{968963D5-F48A-4039-9726-032103F16B48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RequestService", "RequestService", "{E9C7166B-24D8-4817-9298-66E99679BFA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.RequestService.Api", "Src\Microservices\Request-Service\Medifii.RequestService.Api\Medifii.RequestService.Api.csproj", "{7D7650F5-E429-4AB3-A8C6-209EE09EB748}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -233,6 +253,78 @@ Global
 		{D66DA550-5312-4E3F-85BD-6F5ED2A93F9F}.Release|x64.Build.0 = Release|Any CPU
 		{D66DA550-5312-4E3F-85BD-6F5ED2A93F9F}.Release|x86.ActiveCfg = Release|Any CPU
 		{D66DA550-5312-4E3F-85BD-6F5ED2A93F9F}.Release|x86.Build.0 = Release|Any CPU
+		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Debug|x64.Build.0 = Debug|Any CPU
+		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Debug|x86.Build.0 = Debug|Any CPU
+		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Release|x64.ActiveCfg = Release|Any CPU
+		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Release|x64.Build.0 = Release|Any CPU
+		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Release|x86.ActiveCfg = Release|Any CPU
+		{BE3E7284-9930-4AAC-A47B-14F6C5639A06}.Release|x86.Build.0 = Release|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Debug|x64.Build.0 = Debug|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Debug|x86.Build.0 = Debug|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Release|x64.ActiveCfg = Release|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Release|x64.Build.0 = Release|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Release|x86.ActiveCfg = Release|Any CPU
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B}.Release|x86.Build.0 = Release|Any CPU
+		{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D}.Debug|x64.Build.0 = Debug|Any CPU
+		{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D}.Debug|x86.Build.0 = Debug|Any CPU
+		{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D}.Release|x64.ActiveCfg = Release|Any CPU
+		{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D}.Release|x64.Build.0 = Release|Any CPU
+		{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D}.Release|x86.ActiveCfg = Release|Any CPU
+		{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D}.Release|x86.Build.0 = Release|Any CPU
+		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}.Debug|x64.Build.0 = Debug|Any CPU
+		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}.Debug|x86.Build.0 = Debug|Any CPU
+		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}.Release|x64.ActiveCfg = Release|Any CPU
+		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}.Release|x64.Build.0 = Release|Any CPU
+		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}.Release|x86.ActiveCfg = Release|Any CPU
+		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}.Release|x86.Build.0 = Release|Any CPU
+		{968963D5-F48A-4039-9726-032103F16B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{968963D5-F48A-4039-9726-032103F16B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{968963D5-F48A-4039-9726-032103F16B48}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{968963D5-F48A-4039-9726-032103F16B48}.Debug|x64.Build.0 = Debug|Any CPU
+		{968963D5-F48A-4039-9726-032103F16B48}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{968963D5-F48A-4039-9726-032103F16B48}.Debug|x86.Build.0 = Debug|Any CPU
+		{968963D5-F48A-4039-9726-032103F16B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{968963D5-F48A-4039-9726-032103F16B48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{968963D5-F48A-4039-9726-032103F16B48}.Release|x64.ActiveCfg = Release|Any CPU
+		{968963D5-F48A-4039-9726-032103F16B48}.Release|x64.Build.0 = Release|Any CPU
+		{968963D5-F48A-4039-9726-032103F16B48}.Release|x86.ActiveCfg = Release|Any CPU
+		{968963D5-F48A-4039-9726-032103F16B48}.Release|x86.Build.0 = Release|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Debug|x64.Build.0 = Debug|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Debug|x86.Build.0 = Debug|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|x64.ActiveCfg = Release|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|x64.Build.0 = Release|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|x86.ActiveCfg = Release|Any CPU
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -262,6 +354,16 @@ Global
 		{29E11CA5-BE7D-4974-A84D-18E3D65C1427} = {9CB30AC0-8533-4DAC-9D74-C42535C44B9E}
 		{A444B127-5D5E-4ED1-80B6-0843116C0B9A} = {A6CD23A1-9C5F-45EC-9C46-D696C9F991D0}
 		{D66DA550-5312-4E3F-85BD-6F5ED2A93F9F} = {FD5F8EC5-00A2-4E44-99BE-50B4AE831E8C}
+		{00B3E1E4-209B-4E66-8E24-5F836C54E1A6} = {402CFAF7-3F43-4E1B-A7B2-B49A2AED8289}
+		{BE3E7284-9930-4AAC-A47B-14F6C5639A06} = {00B3E1E4-209B-4E66-8E24-5F836C54E1A6}
+		{3010E13D-035A-4633-AF3D-8DD7E0F3D28B} = {085C2C2F-34AC-4CE7-BBB4-D22090382D33}
+		{6CC1A4C8-5461-492B-A93D-D9A4B02BF64D} = {00B3E1E4-209B-4E66-8E24-5F836C54E1A6}
+		{64BA40C5-495B-4CD5-A015-4A2504208273} = {402CFAF7-3F43-4E1B-A7B2-B49A2AED8289}
+		{B3394367-B190-4CDB-8428-95DF208216D6} = {402CFAF7-3F43-4E1B-A7B2-B49A2AED8289}
+		{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA} = {64BA40C5-495B-4CD5-A015-4A2504208273}
+		{968963D5-F48A-4039-9726-032103F16B48} = {B3394367-B190-4CDB-8428-95DF208216D6}
+		{E9C7166B-24D8-4817-9298-66E99679BFA4} = {402CFAF7-3F43-4E1B-A7B2-B49A2AED8289}
+		{7D7650F5-E429-4AB3-A8C6-209EE09EB748} = {E9C7166B-24D8-4817-9298-66E99679BFA4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {340D722A-CF5F-4062-9087-9C30A3F79CDA}
