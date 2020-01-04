@@ -18,6 +18,14 @@ namespace Medifii.ProductService.Controllers
             this.productService = productService;
         }
 
+        // GET
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var products = productService.GetAll();
+            return Ok(products);
+        }
+
         // GET: api/Product/5
         [HttpGet("{id}", Name = "Get")]
         public IActionResult Get(Guid id)

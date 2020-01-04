@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using CSharpFunctionalExtensions;
 using Medifii.ProductService.Repositories.Models;
 
@@ -6,6 +7,8 @@ namespace Medifii.ProductService.Repositories.ServiceInterfaces
 {
     public interface IProductService
     {
+        IEnumerable<Product> GetAll();
+
         Result<Product> GetById(Guid id);
 
         Result Create(Product product);
