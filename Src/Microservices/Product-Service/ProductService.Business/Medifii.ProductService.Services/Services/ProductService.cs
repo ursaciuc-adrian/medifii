@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using CSharpFunctionalExtensions;
 using Entities = Medifii.ProductService.Data.Entities;
 using Medifii.ProductService.Data.RepositoryInterfaces;
@@ -15,6 +17,11 @@ namespace Medifii.ProductService.Services.Services
         public ProductService(IProductRepository productRepository)
         {
             this.productRepository = productRepository;
+        }
+
+        public IEnumerable<Product> GetAll()
+        {
+            return productRepository.GetAll().Select(x => x.ToModel());
         }
 
         public Result<Product> GetById(Guid id)
