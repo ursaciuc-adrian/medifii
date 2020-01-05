@@ -1,6 +1,6 @@
-﻿using Medifii.ScraperService.Infrastructure.Queries;
-using Medifii.SearchService.Dto;
+﻿using Medifii.SearchService.Dto;
 using Medifii.SearchService.Interfaces;
+using Medifii.SearchService.Queries;
 using Microsoft.Extensions.Configuration;
 using RestEase;
 using System;
@@ -18,13 +18,13 @@ namespace Medifii.SearchService.Api.Clients
 		{
 			var httpClient = new HttpClient()
 			{
-				BaseAddress = new Uri(configuration.GetValue<string>("ScraperServiceUri"))
+				BaseAddress = new Uri(configuration.GetValue<string>("ScraperService"))
 			};
 
 			_client = RestClient.For<IScraperClient>(httpClient);
 		}
 
-		public async Task<List<ProductDto>> GetProductsAsync([Body] GetProductsByNameQuery query)
+		public async Task<List<ProductDto>> GetProductsAsync([Body] GetProductsByNameScraperQuery query)
 		{
 			return await _client.GetProductsAsync(query);
 		}

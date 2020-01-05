@@ -12,7 +12,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Scraper-Service\Medifii.ScraperService\Medifii.ScraperService.csproj" />
 	  <ProjectReference Include="..\Medifii.SearchService\Medifii.SearchService.csproj" />
 	</ItemGroup>
 
