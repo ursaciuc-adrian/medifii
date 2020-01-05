@@ -19,12 +19,7 @@ namespace Medifii.SearchService.Api.Queries
 
 		public async Task<IEnumerable<ProductDto>> Handle(SearchProductsQuery request, CancellationToken cancellationToken)
 		{
-			var query = new GetProductsByNameScraperQuery
-			{
-				Name = request.Name
-			};
-
-			return await _scraperClient.GetProductsAsync(query);
+			return await _scraperClient.GetProductsAsync(request.Name);
 		}
 	}
 }

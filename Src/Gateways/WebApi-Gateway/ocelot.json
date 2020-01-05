@@ -1,10 +1,10 @@
 {
 	"ReRoutes": [
 		{
-			"UpstreamPathTemplate": "/api/products/search",
-			"UpstreamHttpMethod": [ "POST" ],
+			"UpstreamPathTemplate": "/api/products/search/{name}",
+			"UpstreamHttpMethod": [ "GET" ],
 
-			"DownstreamPathTemplate": "/api/search",
+			"DownstreamPathTemplate": "/api/search/{name}",
 			"DownstreamScheme": "http",
 			"DownstreamHostAndPorts": [
 				{

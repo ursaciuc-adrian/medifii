@@ -24,9 +24,9 @@ namespace Medifii.SearchService.Api.Clients
 			_client = RestClient.For<IScraperClient>(httpClient);
 		}
 
-		public async Task<List<ProductDto>> GetProductsAsync([Body] GetProductsByNameScraperQuery query)
+		public async Task<List<ProductDto>> GetProductsAsync(string name)
 		{
-			return await _client.GetProductsAsync(query);
+			return await _client.GetProductsAsync(name);
 		}
 	}
 }
