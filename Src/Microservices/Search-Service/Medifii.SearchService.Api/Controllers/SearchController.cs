@@ -16,8 +16,8 @@ namespace Medifii.SearchService.Api.Controllers
 			_mediator = mediator;
 		}
 
-		[HttpPost]
-		public async Task<IActionResult> GetByName([FromBody] SearchProductsQuery query)
+		[HttpGet("{name}")]
+		public async Task<IActionResult> GetByName([FromRoute] SearchProductsQuery query)
 		{
 			var result = await _mediator.Send(query);
 

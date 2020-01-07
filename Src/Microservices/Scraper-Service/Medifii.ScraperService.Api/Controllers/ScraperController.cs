@@ -16,8 +16,8 @@ namespace Medifii.ScraperService.Controllers
 			_mediator = mediator;
 		}
 
-		[HttpPost]
-		public async Task<IActionResult> ScrapeByName([FromBody] GetProductsByNameQuery query)
+		[HttpGet("{name}")]
+		public async Task<IActionResult> ScrapeByName([FromRoute] GetProductsByNameQuery query)
 		{
 			var result = await _mediator.Send(query);
 

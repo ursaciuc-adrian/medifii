@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using Medifii.ScraperService.Infrastructure.Queries;
 using Medifii.SearchService.Dto;
 using Medifii.SearchService.Interfaces;
 using Medifii.SearchService.Queries;
@@ -20,12 +19,7 @@ namespace Medifii.SearchService.Api.Queries
 
 		public async Task<IEnumerable<ProductDto>> Handle(SearchProductsQuery request, CancellationToken cancellationToken)
 		{
-			var query = new GetProductsByNameQuery
-			{
-				Name = request.Name
-			};
-
-			return await _scraperClient.GetProductsAsync(query);
+			return await _scraperClient.GetProductsAsync(request.Name);
 		}
 	}
 }
