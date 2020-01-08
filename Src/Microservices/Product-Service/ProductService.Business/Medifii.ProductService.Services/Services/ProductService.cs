@@ -61,14 +61,24 @@ namespace Medifii.ProductService.Services.Services
 
         private Result<Entities.Product> CreateProduct(Product product)
         {
-            return Entities.Product.Create(product.Name, product.Description, product.Price)
+            return Entities.Product.Create(product.Name, 
+                                            product.Description, 
+                                            product.Price, 
+                                            product.Quantity, 
+                                            product.ExpiryDate, 
+                                            product.Availability)
                 .Tap(productModel => productRepository.Create(productModel))
                 .Tap(_ => productRepository.SaveChanges());
         }
 
         private static Result<Entities.Product> UpdateProduct(Product productModel, Entities.Product product)
         {
-            return product.Update(productModel.Name, productModel.Description, productModel.Price)
+            return product.Update(productModel.Name, 
+                                    productModel.Description, 
+                                    productModel.Price,
+                                    product.Quantity,
+                                    product.ExpiryDate,
+                                    product.Availability)
                 .Map(() => product);
         }
     }
