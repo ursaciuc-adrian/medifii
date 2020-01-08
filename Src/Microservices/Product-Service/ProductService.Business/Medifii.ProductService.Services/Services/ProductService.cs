@@ -24,6 +24,11 @@ namespace Medifii.ProductService.Services.Services
             return productRepository.GetAll().Select(x => x.ToModel());
         }
 
+        public IEnumerable<Product> GetProductsByName(string name)
+        {
+            return productRepository.GetAll().Where(prod => prod.Name.Value.Equals(name)).Select(prod => prod.ToModel());
+        }
+
         public Result<Product> GetById(Guid id)
         {
             return productRepository

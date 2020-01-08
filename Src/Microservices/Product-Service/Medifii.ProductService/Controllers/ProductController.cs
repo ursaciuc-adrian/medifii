@@ -23,9 +23,15 @@ namespace Medifii.ProductService.Controllers
             this.mediator = mediator;
         }
 
-        [HttpPost("/name")]
-        public async Task<IActionResult> GetProductsByName([FromBody] GetProductByNameQuery query)
+        [HttpGet("{name}")]
+        public async Task<IActionResult> GetProductsByName([FromRoute] string name)
         {
+
+            var query = new GetProductByNameQuery
+            {
+                Name = name
+            };
+
             var products = await mediator.Send(query);
 
             return new JsonResult(products);
@@ -40,12 +46,12 @@ namespace Medifii.ProductService.Controllers
         }
 
         // GET: api/Product/5
-        [HttpGet("{id}", Name = "Get")]
-        public IActionResult Get(Guid id)
-        {
-            var product = productService.GetById(id);
-            return product.AsActionResult(NotFound);
-        }
+//        [HttpGet("{id}", Name = "Get")]
+//        public IActionResult Get(Guid id)
+//        {
+//            var product = productService.GetById(id);
+//            return product.AsActionResult(NotFound);
+//        }
 
         // POST: api/Product
         [HttpPost]

@@ -9,4 +9,8 @@
     <PackageReference Include="RestEase" Version="1.4.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Scraper-Service\Medifii.ScraperService\Medifii.ScraperService.csproj" />
+  </ItemGroup>
+
 </Project>

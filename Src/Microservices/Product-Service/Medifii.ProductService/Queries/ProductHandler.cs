@@ -20,7 +20,7 @@ namespace Medifii.ProductService.Queries
 
         public async Task<IEnumerable<Product>> Handle(GetProductByNameQuery request, CancellationToken cancellationToken)
         {
-            var products = productServices.GetAll().Where(x => x.Name == request.Name);
+            var products = productServices.GetProductsByName(request.Name);
             return products;
         }
     }
