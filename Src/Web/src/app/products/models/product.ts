@@ -1,12 +1,12 @@
 export class Product {
-    private id: number;
-    private name: string;
-    private description: string;
-    private price: number;
-    private expiryDate: Date;
-    private quantity: number;
-    private deliveryOptions: string;
-    private availability: string;
+    public id: number;
+    public name: string;
+    public description: string;
+    public price: number;
+    public expiryDate: Date;
+    public quantity: number;
+    public deliveryOptions: string;
+    public availability: string;
     constructor(name: string, price: number, expiryDate: Date, quantity: number, deliveryOptions: string, availability: string, id?: number, description?: string) {
         this.id = id;
         this.name = name;

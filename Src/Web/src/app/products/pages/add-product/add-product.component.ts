@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild, NgZone } from '@angular/core';
+import { Component, OnInit, ViewChild, NgZone, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl, AbstractControl } from '@angular/forms';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { take } from 'rxjs/operators';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -11,7 +12,9 @@ export class AddProductComponent implements OnInit {
   @ViewChild('autosize', { static: false }) autosize: CdkTextareaAutosize;
   private productForm: FormGroup = new FormGroup({});
   private deliverySelections: string[] = ['Courier', 'Personal pickup', 'Easybox'];
-  constructor(private fb: FormBuilder,
+  constructor(public dialogRef: MatDialogRef<AddProductComponent>,
+    @Inject(MAT_DIALOG_DATA) public data,
+    private fb: FormBuilder,
     private _ngZone: NgZone) { }
 
   ngOnInit() {
@@ -31,7 +34,7 @@ export class AddProductComponent implements OnInit {
   }
 
   submit(): void {
-    console.log(this.productForm.value);
+    this.dialogRef.close(this.productForm.value);
   }
 
   get name(): AbstractControl {
