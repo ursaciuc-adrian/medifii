@@ -12,7 +12,10 @@ namespace Medifii.ProductService.Services.Mappers
                 Id = product.Id,
                 Name = product.Name.Value,
                 Description = product.Description.Value,
-                Price = product.Price.Value
+                Price = product.Price.Value,
+                ExpiryDate = product.ExpiryDate,
+                Availability = product.Availability,
+                Quantity = product.Quantity
             };
         }
     }
