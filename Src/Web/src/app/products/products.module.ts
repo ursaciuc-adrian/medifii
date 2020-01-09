@@ -5,6 +5,7 @@ import { ProductsRoutingModule } from './products.routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { ProductsListComponent } from './pages/products-list/products-list.component';
 import { RequestProductComponent } from './pages/request-product/request-product.component';
+import { ConfirmDialogComponent } from '../shared/components/confirm-dialog/confirm-dialog.component';
 
 
 
@@ -18,6 +19,9 @@ import { RequestProductComponent } from './pages/request-product/request-product
     CommonModule,
     SharedModule,
     ProductsRoutingModule
+  ],
+  entryComponents: [
+    ConfirmDialogComponent
   ]
 })
 export class ProductsModule { }
