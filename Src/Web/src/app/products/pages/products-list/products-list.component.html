@@ -7,6 +7,8 @@
             </mat-form-field>
             <button *ngIf="isPharmacist" mat-raised-button color="primary" (click)="openAddDialog()">Add
                 product</button>
+                <button *ngIf="!isPharmacist" mat-raised-button color="primary" (click)="openRequestDialog()">Request
+                    product</button>
         </div>
         <table mat-table [dataSource]="dataSource">
             <ng-container matColumnDef="name">
@@ -45,10 +47,7 @@
                         </button>
                     </div>
                     <div *ngIf="!isPharmacist">
-                        <button mat-icon-button color="warn" (click)="openRequestDialog(element)" matTooltip="Request product">
-                            <mat-icon>add_shopping_cart</mat-icon>
-                        </button>
-                        <button mat-icon-button color="warn" matTooltip="Reserve product">
+                        <button mat-icon-button color="warn" matTooltip="Reserve product" (click)="openReserveDialog(element.id)">
                             <mat-icon>playlist_add_check</mat-icon>
                         </button>
                     </div>

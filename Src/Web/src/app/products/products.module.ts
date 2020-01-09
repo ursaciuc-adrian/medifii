@@ -6,19 +6,23 @@ import { SharedModule } from '../shared/shared.module';
 import { ProductsListComponent } from './pages/products-list/products-list.component';
 import { RequestProductComponent } from './pages/request-product/request-product.component';
 import { ConfirmDialogComponent } from '../shared/components/confirm-dialog/confirm-dialog.component';
+import { ReserveProductComponent } from './pages/reserve-product/reserve-product.component';
 
-
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 @NgModule({
   declarations: [
     ProductsListComponent,
     AddProductComponent,
-    RequestProductComponent
+    RequestProductComponent,
+    ReserveProductComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,    
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule
   ],
   entryComponents: [
     ConfirmDialogComponent
