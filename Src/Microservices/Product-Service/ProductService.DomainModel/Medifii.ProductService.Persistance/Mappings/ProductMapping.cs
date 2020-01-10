@@ -12,6 +12,9 @@ namespace Medifii.ProductService.Persistence.Mappings
             builder.OwnsOne(product => product.Name, prop => prop.Property(x => x.Value));
             builder.OwnsOne(product => product.Description, prop => prop.Property(x => x.Value));
             builder.OwnsOne(product => product.Price, prop => prop.Property(x => x.Value));
+            builder.Property(product => product.ExpiryDate);
+            builder.Property(product => product.Availability);
+            builder.Property(product => product.Quantity);
         }
     }
 }
