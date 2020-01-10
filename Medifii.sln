@@ -67,13 +67,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReservationService", "Reser
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NotificationService", "NotificationService", "{B3394367-B190-4CDB-8428-95DF208216D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ReservationService.Api", "Src\Microservices\Reservation-Service\Medifii.ReservationService.Api\Medifii.ReservationService.Api.csproj", "{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ReservationService.Api", "Src\Microservices\Reservation-Service\Medifii.ReservationService.Api\Medifii.ReservationService.Api.csproj", "{BA7F1D2C-0F55-4C17-BE8A-C385FBF829AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.NotificationService.Api", "Src\Microservices\Notification-Service\Medifii.NotificationService.Api\Medifii.NotificationService.Api.csproj", "{968963D5-F48A-4039-9726-032103F16B48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.NotificationService.Api", "Src\Microservices\Notification-Service\Medifii.NotificationService.Api\Medifii.NotificationService.Api.csproj", "{968963D5-F48A-4039-9726-032103F16B48}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RequestService", "RequestService", "{E9C7166B-24D8-4817-9298-66E99679BFA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.RequestService.Api", "Src\Microservices\Request-Service\Medifii.RequestService.Api\Medifii.RequestService.Api.csproj", "{7D7650F5-E429-4AB3-A8C6-209EE09EB748}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.RequestService.Api", "Src\Microservices\Request-Service\Medifii.RequestService.Api\Medifii.RequestService.Api.csproj", "{7D7650F5-E429-4AB3-A8C6-209EE09EB748}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ReservationService", "Src\Microservices\Reservation-Service\Medifii.ReservationService\Medifii.ReservationService.csproj", "{A56AE0D0-A100-4935-9361-9DEFE6421DE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{9EC6D17C-0D1F-43F9-87E9-9B4D77571809}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.Common.DataAccess", "Src\Microservices\Common\Medifii.Common.DataAccess\Medifii.Common.DataAccess.csproj", "{D3035B80-1E24-4CDE-85E5-D10355ABD94A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -325,6 +331,30 @@ Global
 		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|x64.Build.0 = Release|Any CPU
 		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|x86.ActiveCfg = Release|Any CPU
 		{7D7650F5-E429-4AB3-A8C6-209EE09EB748}.Release|x86.Build.0 = Release|Any CPU
+		{A56AE0D0-A100-4935-9361-9DEFE6421DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A56AE0D0-A100-4935-9361-9DEFE6421DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A56AE0D0-A100-4935-9361-9DEFE6421DE2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A56AE0D0-A100-4935-9361-9DEFE6421DE2}.Debug|x64.Build.0 = Debug|Any CPU
+		{A56AE0D0-A100-4935-9361-9DEFE6421DE2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A56AE0D0-A100-4935-9361-9DEFE6421DE2}.Debug|x86.Build.0 = Debug|Any CPU
+		{A56AE0D0-A100-4935-9361-9DEFE6421DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A56AE0D0-A100-4935-9361-9DEFE6421DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A56AE0D0-A100-4935-9361-9DEFE6421DE2}.Release|x64.ActiveCfg = Release|Any CPU
+		{A56AE0D0-A100-4935-9361-9DEFE6421DE2}.Release|x64.Build.0 = Release|Any CPU
+		{A56AE0D0-A100-4935-9361-9DEFE6421DE2}.Release|x86.ActiveCfg = Release|Any CPU
+		{A56AE0D0-A100-4935-9361-9DEFE6421DE2}.Release|x86.Build.0 = Release|Any CPU
+		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Debug|x64.Build.0 = Debug|Any CPU
+		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Debug|x86.Build.0 = Debug|Any CPU
+		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Release|x64.ActiveCfg = Release|Any CPU
+		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Release|x64.Build.0 = Release|Any CPU
+		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Release|x86.ActiveCfg = Release|Any CPU
+		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -364,6 +394,9 @@ Global
 		{968963D5-F48A-4039-9726-032103F16B48} = {B3394367-B190-4CDB-8428-95DF208216D6}
 		{E9C7166B-24D8-4817-9298-66E99679BFA4} = {402CFAF7-3F43-4E1B-A7B2-B49A2AED8289}
 		{7D7650F5-E429-4AB3-A8C6-209EE09EB748} = {E9C7166B-24D8-4817-9298-66E99679BFA4}
+		{A56AE0D0-A100-4935-9361-9DEFE6421DE2} = {64BA40C5-495B-4CD5-A015-4A2504208273}
+		{9EC6D17C-0D1F-43F9-87E9-9B4D77571809} = {402CFAF7-3F43-4E1B-A7B2-B49A2AED8289}
+		{D3035B80-1E24-4CDE-85E5-D10355ABD94A} = {9EC6D17C-0D1F-43F9-87E9-9B4D77571809}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {340D722A-CF5F-4062-9087-9C30A3F79CDA}
