@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Medifii.ScraperService.Infrastructure.Scraper
+namespace Medifii.ScraperService.Scraper
 {
 	public class Options
 	{

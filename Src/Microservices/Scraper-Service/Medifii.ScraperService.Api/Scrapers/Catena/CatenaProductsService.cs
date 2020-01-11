@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Medifii.ScraperService.Dto;
+using Medifii.ScraperService.Interfaces;
+using Medifii.ScraperService.Scraper;
 
-using Medifii.ScraperService.Infrastructure.Dto;
-using Medifii.ScraperService.Infrastructure.Interfaces;
-using Medifii.ScraperService.Infrastructure.Scraper;
-
-namespace Medifii.ScraperService.Scrapers.Catena
+namespace Medifii.ScraperService.Api.Scrapers.Catena
 {
 	public class CatenaProductsService : IScraperService
 	{

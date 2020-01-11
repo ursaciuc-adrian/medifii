@@ -1,6 +1,5 @@
 ﻿using Medifii.SearchService.Dto;
 using Medifii.SearchService.Interfaces;
-using Medifii.SearchService.Queries;
 using Microsoft.Extensions.Configuration;
 using RestEase;
 using System;

@@ -1,6 +1,6 @@
-﻿using Medifii.ScraperService.Infrastructure.Enums;
+﻿using Medifii.ScraperService.Enums;
 
-namespace Medifii.ScraperService.Infrastructure.Dto
+namespace Medifii.ScraperService.Dto
 {
 	public class ProductDto
 	{

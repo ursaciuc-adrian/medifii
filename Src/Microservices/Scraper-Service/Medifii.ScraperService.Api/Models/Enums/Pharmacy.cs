@@ -1,4 +1,4 @@
-﻿namespace Medifii.ScraperService.Models.Enums
+﻿namespace Medifii.ScraperService.Api.Models.Enums
 {
 	public enum Pharmacy
 	{

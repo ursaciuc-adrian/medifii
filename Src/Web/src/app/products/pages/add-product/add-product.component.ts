@@ -1,7 +1,9 @@
-import { Component, OnInit, ViewChild, NgZone } from '@angular/core';
+import { Component, OnInit, ViewChild, NgZone, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl, AbstractControl } from '@angular/forms';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { take } from 'rxjs/operators';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import * as moment from 'moment';
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -11,11 +13,33 @@ export class AddProductComponent implements OnInit {
   @ViewChild('autosize', { static: false }) autosize: CdkTextareaAutosize;
   private productForm: FormGroup = new FormGroup({});
   private deliverySelections: string[] = ['Courier', 'Personal pickup', 'Easybox'];
-  constructor(private fb: FormBuilder,
+  constructor(public dialogRef: MatDialogRef<AddProductComponent>,
+    @Inject(MAT_DIALOG_DATA) public data,
+    private fb: FormBuilder,
     private _ngZone: NgZone) { }
 
   ngOnInit() {
-    this.createForm();
+    this.initializeForm();
+  }
+
+  initializeForm(): void {
+    if (this.data.isEdit) {
+      this.createFormWithValues(this.data.product);
+    } else {
+      this.createForm();
+    }
+  }
+
+  createFormWithValues(product): void {
+    const dateValues = product.expiryDate.split('-').reverse();
+    this.productForm = this.fb.group({
+      name: [product.name, [Validators.required]],
+      description: [product.description, [Validators.maxLength(200)]],
+      price: [product.price, [Validators.required, Validators.min(0)]],
+      expiryDate: [new Date(dateValues), [Validators.required, this.dateValidator.bind(this)]],
+      quantity: [product.quantity, [Validators.required, Validators.min(1)]],
+      availability: [product.availability, [Validators.required]]
+    });
   }
 
   createForm(): void {
@@ -25,13 +49,16 @@ export class AddProductComponent implements OnInit {
       price: ['', [Validators.required, Validators.min(0)]],
       expiryDate: ['', [Validators.required, this.dateValidator.bind(this)]],
       quantity: ['', [Validators.required, Validators.min(1)]],
-      deliveryOptions: ['', [Validators.required]],
       availability: ['', [Validators.required]]
     });
   }
 
   submit(): void {
-    console.log(this.productForm.value);
+    if (this.data.isEdit) {
+      this.dialogRef.close({ id: this.data.product.id, ...this.productForm.value });
+    } else {
+      this.dialogRef.close(this.productForm.value);
+    }
   }
 
   get name(): AbstractControl {
@@ -48,9 +75,6 @@ export class AddProductComponent implements OnInit {
   }
   get quantity(): AbstractControl {
     return this.productForm.get('quantity');
-  }
-  get deliveryOptions(): AbstractControl {
-    return this.productForm.get('deliveryOptions');
   }
   get availability(): AbstractControl {
     return this.productForm.get('availability');

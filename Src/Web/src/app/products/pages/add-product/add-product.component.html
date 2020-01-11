@@ -27,18 +27,11 @@
             <input matInput type="number" placeholder="Quantity" formControlName='quantity'>
             <mat-error *ngIf="quantity.invalid && quantity.errors.required">This field is required.</mat-error>
             <mat-error *ngIf="quantity.invalid && quantity.errors.min">You have to add at least 1 product.</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-select formControlName='deliveryOptions' placeholder="Choose type of delivery">
-                <mat-option *ngFor='let delivery of deliverySelections' [value]="delivery">{{delivery}}</mat-option>
-            </mat-select>
-            <mat-error *ngIf="deliveryOptions.invalid && deliveryOptions.errors.required">This field is required.
-            </mat-error>
-        </mat-form-field>
+        </mat-form-field>        
         <mat-form-field>
             <mat-select formControlName='availability' placeholder="Choose availability">
-                <mat-option value="On stock">On stock</mat-option>
-                <mat-option value="Out of stock">Out of stock</mat-option>
+                <mat-option [value]="true">On stock</mat-option>
+                <mat-option [value]="false">Out of stock</mat-option>
             </mat-select>
             <mat-error *ngIf="availability.invalid && availability.errors.required">This field is required.</mat-error>
         </mat-form-field>
