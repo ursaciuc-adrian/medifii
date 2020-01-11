@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Net;
+using System.Threading.Tasks;
+using MediatR;
 using Medifii.ProductService.Mappers;
 using Medifii.ProductService.Repositories.Models;
+using Medifii.ProductService.Repositories.Queries;
 using Medifii.ProductService.Repositories.ServiceInterfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,10 +15,26 @@ namespace Medifii.ProductService.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IProductService productService;
+        private readonly IMediator mediator;
 
-        public ProductController(IProductService productService)
+        public ProductController(IProductService productService, IMediator mediator)
         {
             this.productService = productService;
+            this.mediator = mediator;
+        }
+
+        [HttpGet("{name}")]
+        public async Task<IActionResult> GetProductsByName([FromRoute] string name)
+        {
+
+            var query = new GetProductByNameQuery
+            {
+                Name = name
+            };
+
+            var products = await mediator.Send(query);
+
+            return new JsonResult(products);
         }
 
         // GET
@@ -24,14 +43,6 @@ namespace Medifii.ProductService.Controllers
         {
             var products = productService.GetAll();
             return Ok(products);
-        }
-
-        // GET: api/Product/5
-        [HttpGet("{id}", Name = "Get")]
-        public IActionResult Get(Guid id)
-        {
-            var product = productService.GetById(id);
-            return product.AsActionResult(NotFound);
         }
 
         // POST: api/Product

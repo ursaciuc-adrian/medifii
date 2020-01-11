@@ -23,6 +23,8 @@ namespace Medifii.SearchService.Api
 		{
 			services.AddSingleton<IScraperClient, ScraperClient>();
 
+            services.AddSingleton<IProductClient, ProductClient>();
+
 			services.AddControllers();
 
 			services.AddMediatR(Assembly.GetExecutingAssembly());
