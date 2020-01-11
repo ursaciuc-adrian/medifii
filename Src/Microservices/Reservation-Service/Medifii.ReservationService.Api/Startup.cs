@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using MediatR;
 using Medifii.Common.DataAccess;
 using Medifii.ReservationService.Api.Context;
@@ -23,7 +24,10 @@ namespace Medifii.ReservationService.Api
 
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddControllers();
+			services.AddControllers().AddFluentValidation(opt =>
+			{
+				opt.RegisterValidatorsFromAssembly(typeof(ReservationService.AppReference).GetTypeInfo().Assembly);
+			});
 
 			services.AddDbContext<ReservationsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
