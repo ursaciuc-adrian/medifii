@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Medifii.RequestService.DomainModel\Medifii.RequestService.Data\Medifii.RequestService.Data.csproj" />
+    <ProjectReference Include="..\..\Medifii.RequestService.DomainModel\Medifii.RequestService.Persistence\Medifii.RequestService.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
