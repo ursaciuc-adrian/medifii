@@ -18,6 +18,13 @@ namespace Medifii.RequestService.Api.Controllers
             _requestService = requestService;
         }
 
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var result = _requestService.GetAll();
+            return Ok(result);
+        }
+
         // POST: api/Pharmacy
         [HttpPost]
         public IActionResult CreateRequest([FromBody] Request pharmacy)

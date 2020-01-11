@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using CSharpFunctionalExtensions;
 using Medifii.RequestService.Data.Entities;
@@ -14,6 +15,11 @@ namespace Medifii.RequestService.Repositories.Repositories
         public RequestRepository(RequestContext requestContext)
         {
             _requestContext = requestContext;
+        }
+
+        public IEnumerable<Request> GetAll()
+        {
+            return _requestContext.Requests.ToList();
         }
 
         public Maybe<Request> GetById(Guid id)

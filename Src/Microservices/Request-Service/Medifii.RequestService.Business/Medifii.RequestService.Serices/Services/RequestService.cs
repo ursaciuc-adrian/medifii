@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using CSharpFunctionalExtensions;
 using Entities = Medifii.RequestService.Data.Entities;
 using Medifii.RequestService.Data.RepositoryInterfaces;
 using Medifii.RequestService.Repositories.Models;
 using Medifii.RequestService.Repositories.ServiceInterfaces;
+using Medifii.RequestService.Services.Mappers;
 
 namespace Medifii.RequestService.Services.Services
 {
@@ -14,6 +17,11 @@ namespace Medifii.RequestService.Services.Services
         public RequestService(IRequestRepository requestRepository)
         {
             _requestRepository = requestRepository;
+        }
+
+        public IEnumerable<Request> GetAll()
+        {
+            return _requestRepository.GetAll().Select(r => r.ToModel());
         }
 
         public Result MakeRequest(Request request)
