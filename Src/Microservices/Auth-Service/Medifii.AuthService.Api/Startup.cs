@@ -68,8 +68,8 @@ namespace Medifii.AuthService.Api
 
 			app.UseRouting();
 
-			app.UseAuthorization();
 			app.UseAuthentication();
+			app.UseAuthorization();
 
 			app.UseOpenApi();
 			app.UseSwaggerUi3();

@@ -1,9 +1,11 @@
 ﻿using MediatR;
 using Medifii.AuthService.Commands.RegisterUser;
+using Medifii.AuthService.Queries.Identity;
 using Medifii.AuthService.Queries.LogInUser;
 using Medifii.AuthService.Queries.LogOutUser;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Medifii.AuthService.Api.Controllers
@@ -34,6 +36,19 @@ namespace Medifii.AuthService.Api.Controllers
 
 			return new JsonResult(result);
 		}
+
+		[Authorize]
+		[HttpGet("identity")]
+		public async Task<IActionResult> Identity()
+		{
+			var result = await _mediator.Send(new GetUserIdentityQuery
+			{
+				Email = User.FindFirstValue(ClaimTypes.Email)
+			});
+
+			return new JsonResult(result);
+		}
+
 
 		[Authorize]
 		[HttpPost("logout")]

@@ -6,6 +6,10 @@ namespace Medifii.AuthService.Queries.LogInUser
 	{
 		public LogInUserValidator()
 		{
+			RuleFor(x => x.Email)
+				.NotEmpty()
+				.EmailAddress();
+			RuleFor(x => x.Password).NotEmpty();
 		}
 	}
 }

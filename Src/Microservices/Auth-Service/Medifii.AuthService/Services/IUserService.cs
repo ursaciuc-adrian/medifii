@@ -7,6 +7,7 @@ namespace Medifii.AuthService.Services
 		Task<string> AuthenticateAsync(string email, string password);
 
 		Task<T> CreateAsync(T user, string password);
+		Task<T> GetLoggedInUser(string email);
 
 		Task SignOutAsync();
 	}

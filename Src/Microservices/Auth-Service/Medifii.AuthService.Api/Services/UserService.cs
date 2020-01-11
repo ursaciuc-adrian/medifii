@@ -56,6 +56,11 @@ namespace Medifii.AuthService.Api.Services
 			return null;
 		}
 
+		public async Task<AppUser> GetLoggedInUser(string email)
+		{
+			return await _userManager.FindByEmailAsync(email);
+		}
+
 		public async Task SignOutAsync()
 		{
 			await _signInManager.SignOutAsync();

@@ -1,7 +1,9 @@
-﻿using MediatR;
+﻿using FluentValidation.Results;
+using MediatR;
 using Medifii.AuthService.Commands.RegisterUser;
 using Medifii.AuthService.Identity;
 using Medifii.AuthService.Services;
+using NJsonSchema.Validation;
 using System.Threading;
 using System.Threading.Tasks;
 
