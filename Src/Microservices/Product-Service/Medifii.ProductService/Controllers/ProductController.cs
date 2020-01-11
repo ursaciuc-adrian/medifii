@@ -45,14 +45,6 @@ namespace Medifii.ProductService.Controllers
             return Ok(products);
         }
 
-        // GET: api/Product/5
-//        [HttpGet("{id}", Name = "Get")]
-//        public IActionResult Get(Guid id)
-//        {
-//            var product = productService.GetById(id);
-//            return product.AsActionResult(NotFound);
-//        }
-
         // POST: api/Product
         [HttpPost]
         public IActionResult Post([FromBody] Product product)
