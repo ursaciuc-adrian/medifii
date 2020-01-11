@@ -1,11 +1,11 @@
 using FluentValidation.AspNetCore;
 using MediatR;
 using Medifii.AuthService.Api.Context;
-using Medifii.AuthService.Api.Extensions;
 using Medifii.AuthService.Api.Options;
 using Medifii.AuthService.Api.Services;
 using Medifii.AuthService.Identity;
 using Medifii.AuthService.Services;
+using Medifii.Common.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;

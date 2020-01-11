@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Medifii.Common\Medifii.Common.csproj" />
     <ProjectReference Include="..\Medifii.AuthService\Medifii.AuthService.csproj" />
   </ItemGroup>
 

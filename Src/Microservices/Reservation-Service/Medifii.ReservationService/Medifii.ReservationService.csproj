@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\Medifii.Common.DataAccess\Medifii.Common.DataAccess.csproj" />
+    <ProjectReference Include="..\..\Common\Medifii.Common\Medifii.Common.csproj" />
   </ItemGroup>
 
 </Project>

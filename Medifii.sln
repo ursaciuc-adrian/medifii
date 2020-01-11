@@ -79,9 +79,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ReservationService"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{9EC6D17C-0D1F-43F9-87E9-9B4D77571809}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.Common.DataAccess", "Src\Microservices\Common\Medifii.Common.DataAccess\Medifii.Common.DataAccess.csproj", "{D3035B80-1E24-4CDE-85E5-D10355ABD94A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.Common", "Src\Microservices\Common\Medifii.Common\Medifii.Common.csproj", "{D3035B80-1E24-4CDE-85E5-D10355ABD94A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.AuthService", "Src\Microservices\Auth-Service\Medifii.AuthService\Medifii.AuthService.csproj", "{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.AuthService", "Src\Microservices\Auth-Service\Medifii.AuthService\Medifii.AuthService.csproj", "{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
