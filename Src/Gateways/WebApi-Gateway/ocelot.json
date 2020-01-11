@@ -12,6 +12,19 @@
 					"Port": 7040
 				}
 			]
+		},
+		{
+			"UpstreamPathTemplate": "/api/reservations/{everything}",
+			"UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+
+			"DownstreamPathTemplate": "/api/reservations/{everything}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7060
+				}
+			]
 		}
 	],
 	"GlobalConfiguration": {
