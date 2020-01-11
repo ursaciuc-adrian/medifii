@@ -25,6 +25,19 @@
 					"Port": 7060
 				}
 			]
+		},
+		{
+			"UpstreamPathTemplate": "/api/auth/{everything}",
+			"UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+
+			"DownstreamPathTemplate": "/api/auth/{everything}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7010
+				}
+			]
 		}
 	],
 	"GlobalConfiguration": {

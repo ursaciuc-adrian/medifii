@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ApiGateway", "Src\Gateways\WebApi-Gateway\Medifii.ApiGateway.csproj", "{4A47470B-EC25-458B-853A-943B9DC75226}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.AuthService", "Src\Microservices\Auth-Service\Medifii.AuthService\Medifii.AuthService.csproj", "{5275364F-01A4-4F74-B780-7C470C254404}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.AuthService.Api", "Src\Microservices\Auth-Service\Medifii.AuthService.Api\Medifii.AuthService.Api.csproj", "{5275364F-01A4-4F74-B780-7C470C254404}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{7581CA23-8E79-4E18-A02A-E3715C6B0609}"
 EndProject
@@ -79,7 +79,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ReservationService"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{9EC6D17C-0D1F-43F9-87E9-9B4D77571809}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.Common.DataAccess", "Src\Microservices\Common\Medifii.Common.DataAccess\Medifii.Common.DataAccess.csproj", "{D3035B80-1E24-4CDE-85E5-D10355ABD94A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.Common", "Src\Microservices\Common\Medifii.Common\Medifii.Common.csproj", "{D3035B80-1E24-4CDE-85E5-D10355ABD94A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RequestService.Business", "RequestService.Business", "{65A5D63A-9542-4C47-80D4-9EA26F9C3D33}"
 EndProject
@@ -94,6 +94,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.RequestService.Persistence", "Src\Microservices\Request-Service\Medifii.RequestService.DomainModel\Medifii.RequestService.Persistence\Medifii.RequestService.Persistence.csproj", "{7584585B-3DEB-4939-934F-47E951FA3A5F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.RequestService.Repositories", "Src\Microservices\Request-Service\Medifii.RequestService.DomainService\Medifii.RequestService.Repositories\Medifii.RequestService.Repositories.csproj", "{F755AFDD-3BAE-4169-B8EB-FBBCCB638747}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.AuthService", "Src\Microservices\Auth-Service\Medifii.AuthService\Medifii.AuthService.csproj", "{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -417,6 +419,18 @@ Global
 		{F755AFDD-3BAE-4169-B8EB-FBBCCB638747}.Release|x64.Build.0 = Release|Any CPU
 		{F755AFDD-3BAE-4169-B8EB-FBBCCB638747}.Release|x86.ActiveCfg = Release|Any CPU
 		{F755AFDD-3BAE-4169-B8EB-FBBCCB638747}.Release|x86.Build.0 = Release|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Debug|x64.Build.0 = Debug|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Debug|x86.Build.0 = Debug|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|x64.ActiveCfg = Release|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|x64.Build.0 = Release|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|x86.ActiveCfg = Release|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -466,6 +480,7 @@ Global
 		{BCAAAAE6-2156-47BD-AEA1-4C66BE3387E7} = {1CC2360D-0E48-43FC-AADF-4E9ACEDE8A66}
 		{7584585B-3DEB-4939-934F-47E951FA3A5F} = {1CC2360D-0E48-43FC-AADF-4E9ACEDE8A66}
 		{F755AFDD-3BAE-4169-B8EB-FBBCCB638747} = {967E7A34-1FB0-438B-9F05-C501C72F18C1}
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709} = {36003DD3-6E91-4B7C-B7EF-70D735FAADAD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {340D722A-CF5F-4062-9087-9C30A3F79CDA}

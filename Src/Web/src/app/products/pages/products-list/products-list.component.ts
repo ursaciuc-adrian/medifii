@@ -5,6 +5,7 @@ import { AddProductComponent } from '../add-product/add-product.component';
 import { RequestProductComponent } from '../request-product/request-product.component';
 import { ProductsService } from '../../services/products/products.service';
 import { ConfirmDialogComponent } from 'src/app/shared/components/confirm-dialog/confirm-dialog.component';
+import { ReserveProductComponent } from '../reserve-product/reserve-product.component';
 import * as moment from 'moment';
 @Component({
   selector: 'app-products-list',
@@ -75,6 +76,10 @@ export class ProductsListComponent implements OnInit {
     const dialogRef = this.dialog.open(RequestProductComponent, {
 
     });
+  }
+
+  openReserveDialog(productId: string): void {
+    const dialogRef = this.dialog.open(ReserveProductComponent, {});
   }
 
   deleteProduct(product: Product): void {

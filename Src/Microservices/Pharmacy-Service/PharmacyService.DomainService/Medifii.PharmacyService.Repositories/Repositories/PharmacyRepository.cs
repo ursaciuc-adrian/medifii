@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using CSharpFunctionalExtensions;
 using Medifii.PharmacyService.Data.Entities;
@@ -14,6 +15,11 @@ namespace Medifii.PharmacyService.Repositories.Repositories
         public PharmacyRepository(PharmacyContext context)
         {
             this.context = context;
+        }
+
+        public IEnumerable<Pharmacy> GetAll()
+        {
+            return context.Pharmacies.ToList();
         }
 
         public Maybe<Pharmacy> GetById(Guid id)

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from '../shared/shared.module';
+import { NavigationMenuComponent } from '../shared/components/navigation-menu/navigation-menu.component';
 
 @NgModule({
   declarations: [

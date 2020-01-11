@@ -2,12 +2,17 @@
 <div mat-dialog-content>
     <form [formGroup]="requestForm">
         <mat-form-field>
-            <input matInput placeholder="First and last name" type="text" formControlName="name">
+            <input matInput placeholder="Product name" type="text" formControlName="name">
             <mat-error *ngIf="name.invalid && name.errors.required">This field is required.</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <span matPrefix>+40 &nbsp;</span>
-            <input matInput placeholder="Phone number" type="tel" formControlName="phoneNumber">
+            <input matInput placeholder="Quantity" type="number" formControlName="quantity">
+            <mat-error *ngIf="quantity.invalid && quantity.errors.required">This field is required.</mat-error>
+            <mat-error *ngIf="quantity.invalid && quantity.errors.min">Mininum value is 1.</mat-error>
         </mat-form-field>
     </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close color="primary">Close</button>
+    <button mat-raised-button  color="primary" (click)="submit()">Submit</button>
 </div>

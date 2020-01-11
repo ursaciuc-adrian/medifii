@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using CSharpFunctionalExtensions;
 using Entities = Medifii.PharmacyService.Data.Entities;
 using Medifii.PharmacyService.Data.RepositoryInterfaces;
@@ -15,6 +17,11 @@ namespace Medifii.PharmacyService.Services.Services
         public PharmacyService(IPharmacyRepository pharmacyRepository)
         {
             this.pharmacyRepository = pharmacyRepository;
+        }
+
+        public IEnumerable<Pharmacy> GetAll()
+        {
+            return pharmacyRepository.GetAll().Select(ph => ph.ToModel());
         }
 
         public Result<Pharmacy> GetById(Guid id)

@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators, FormControl, AbstractControl } from
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { take } from 'rxjs/operators';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import * as moment from 'moment';
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',

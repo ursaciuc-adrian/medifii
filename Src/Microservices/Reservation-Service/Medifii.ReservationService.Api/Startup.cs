@@ -1,15 +1,20 @@
 using FluentValidation.AspNetCore;
+using IdentityServer4.AccessTokenValidation;
 using MediatR;
 using Medifii.Common.DataAccess;
+using Medifii.Common.Extensions;
 using Medifii.ReservationService.Api.Context;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Reflection;
+using System.Text;
 
 namespace Medifii.ReservationService.Api
 {
@@ -35,6 +40,8 @@ namespace Medifii.ReservationService.Api
 
 			services.AddMediatR(Assembly.GetExecutingAssembly());
 
+			services.AddJwtAuthentication(Configuration);
+
 			services.AddSwaggerDocument(config =>
 			{
 				config.PostProcess = document =>
@@ -58,6 +65,9 @@ namespace Medifii.ReservationService.Api
 
 			app.UseOpenApi();
 			app.UseSwaggerUi3();
+
+			app.UseAuthentication();
+			app.UseAuthorization();
 
 			app.UseAuthorization();
 

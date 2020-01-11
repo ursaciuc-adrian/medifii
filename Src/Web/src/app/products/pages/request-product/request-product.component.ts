@@ -17,9 +17,7 @@ export class RequestProductComponent implements OnInit {
   createForm(): void {
     this.requestForm = this.fb.group({
       name: ['', [Validators.required]],
-      phoneNumber: ['', [Validators.required, Validators.pattern(/^(\+4|)?(07[0-8]{1}[0-9]{1}|02[0-9]{2}|03[0-9]{2}){1}?(\s|\.|\-)?([0-9]{3}(\s|\.|\-|)){2}$/)]],
-      deliveryAddress: ['', [Validators.required]],
-      billingAdress: ['', [Validators.required]]
+      quantity: ['', [Validators.required, Validators.min(1)]],
     });
   }
 
@@ -31,16 +29,8 @@ export class RequestProductComponent implements OnInit {
     return this.requestForm.get('name');
   }
 
-  get phoneNumber(): AbstractControl {
-    return this.requestForm.get('phoneNumber');
-  }
-
-  get deliveryAddress(): AbstractControl {
-    return this.requestForm.get('deliveryAddress');
-  }
-
-  get billingAddress(): AbstractControl {
-    return this.requestForm.get('billingAddress');
+  get quantity(): AbstractControl {
+    return this.requestForm.get('quantity');
   }
 
 }
