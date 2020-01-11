@@ -6,7 +6,7 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 
-namespace Medifii.AuthService.Api.Extensions
+namespace Medifii.Common.Extensions
 {
 	public static class JwtExtensions
 	{

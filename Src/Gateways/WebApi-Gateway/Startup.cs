@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using IdentityServer4.AccessTokenValidation;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +20,16 @@ namespace Medifii.ApiGateway
 
 		public void ConfigureServices(IServiceCollection services)
 		{
+			var authProviderKey = "TestKey";
+
+			services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+				.AddIdentityServerAuthentication(authProviderKey, o =>
+				{
+					o.Authority = "http://localhost:7000";
+					o.SupportedTokens = SupportedTokens.Both;
+					o.RequireHttpsMetadata = false;
+				});
+
 			services.AddCors(options =>
 			{
 				options.AddPolicy("CorsPolicy",

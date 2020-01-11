@@ -5,6 +5,8 @@ using Medifii.ReservationService.Commands.CancelReservation;
 using Medifii.ReservationService.Commands.CompleteReservation;
 using Medifii.ReservationService.Commands.CreateReservation;
 using Medifii.ReservationService.Queries.GetReservations;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace Medifii.ReservationService.Api.Controllers
 {
