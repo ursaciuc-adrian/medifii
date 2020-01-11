@@ -1,3 +1,5 @@
+using System.Reflection;
+using MediatR;
 using Medifii.ProductService.Data.RepositoryInterfaces;
 using Medifii.ProductService.Persistence;
 using Medifii.ProductService.Repositories.Repositories;
@@ -36,7 +38,9 @@ namespace Medifii.ProductService
 			{
 				c.SwaggerDoc("v1", new OpenApiInfo { Title = "Product API", Version = "v1" });
 			});
-		}
+
+            services.AddMediatR(Assembly.GetExecutingAssembly());
+        }
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

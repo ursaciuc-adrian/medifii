@@ -1,9 +1,8 @@
-﻿using Medifii.ScraperService.Infrastructure.Dto;
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Medifii.ScraperService.Dto;
 
-namespace Medifii.ScraperService.Infrastructure.Interfaces
+namespace Medifii.ScraperService.Interfaces
 {
 	public interface IScraperService
 	{

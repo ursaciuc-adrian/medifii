@@ -1,11 +1,11 @@
 ﻿using MediatR;
-using Medifii.ScraperService.Infrastructure.Dto;
-using Medifii.ScraperService.Infrastructure.Interfaces;
-using Medifii.ScraperService.Infrastructure.Queries;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Medifii.ScraperService.Dto;
+using Medifii.ScraperService.Interfaces;
+using Medifii.ScraperService.Queries;
 
 namespace Medifii.ScraperService.Api.Queries
 {

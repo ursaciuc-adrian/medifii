@@ -9,6 +9,8 @@ namespace Medifii.ProductService.Repositories.ServiceInterfaces
     {
         IEnumerable<Product> GetAll();
 
+        IEnumerable<Product> GetProductsByName(string name);
+
         Result<Product> GetById(Guid id);
 
         Result Create(Product product);

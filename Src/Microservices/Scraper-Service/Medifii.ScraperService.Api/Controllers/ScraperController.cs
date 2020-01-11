@@ -1,9 +1,9 @@
-﻿using MediatR;
-using Medifii.ScraperService.Infrastructure.Queries;
+﻿using System.Threading.Tasks;
+using MediatR;
+using Medifii.ScraperService.Queries;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
-namespace Medifii.ScraperService.Controllers
+namespace Medifii.ScraperService.Api.Controllers
 {
 	[ApiController]
 	[Route("api/[controller]")]
