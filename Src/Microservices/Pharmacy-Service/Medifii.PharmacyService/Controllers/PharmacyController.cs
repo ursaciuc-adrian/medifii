@@ -18,6 +18,13 @@ namespace Medifii.PharmacyService.Controllers
             this.pharmacyService = pharmacyService;
         }
 
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var result = pharmacyService.GetAll();
+            return Ok(result);
+        }
+
         // GET: api/Pharmacy/5
         [HttpGet("{id}", Name = "Get")]
         public IActionResult GetById(Guid id)
