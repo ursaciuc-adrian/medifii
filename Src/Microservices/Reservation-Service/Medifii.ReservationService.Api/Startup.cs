@@ -43,12 +43,6 @@ namespace Medifii.ReservationService.Api
 					document.Info.Title = "Reservations API";
 				};
 			});
-
-			// TODO
-			// Restructure app
-			// Add extesion to register validatiors
-			// Middleware for validators
-			// Extesions for mappings / automapper
 		}
 
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

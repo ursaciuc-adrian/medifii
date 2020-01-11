@@ -5,6 +5,7 @@ using Medifii.ReservationService.Commands;
 using Medifii.ReservationService.Dtos;
 using Medifii.ReservationService.Entities;
 using Medifii.ReservationService.Enums;
+using Medifii.ReservationService.Mappers;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -36,16 +37,7 @@ namespace Medifii.ReservationService.Api.Commands
 
 			await _unitOfWork.SaveChangesAsync();
 
-			return new ReservationDto()
-			{
-				Id = reservation.Id,
-				UserId = reservation.UserId,
-				ProductId = reservation.ProductId,
-				PharmacyId = reservation.PharmacyId,
-				Quantity = reservation.Quantity,
-				PickupTime = reservation.PickupTime,
-				Status = reservation.Status
-			};
+			return reservation.ToDto();
 		}
 	}
 }

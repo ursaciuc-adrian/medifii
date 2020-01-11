@@ -3,6 +3,7 @@ using Medifii.Common.DataAccess;
 using Medifii.ReservationService.Api.Context;
 using Medifii.ReservationService.Dtos;
 using Medifii.ReservationService.Entities;
+using Medifii.ReservationService.Mappers;
 using Medifii.ReservationService.Queries;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,19 +28,7 @@ namespace Medifii.ReservationService.Api.Queries
 			var response = new List<ReservationDto>();
 			var reservations = await reservationsRepository.GetWhereAsync(x => x.PharmacyId == request.PharmacyId);
 
-			response.AddRange(reservations.Select(r =>
-			{
-				return new ReservationDto()
-				{
-					Id = r.Id,
-					UserId = r.UserId,
-					ProductId = r.ProductId,
-					PharmacyId = r.PharmacyId,
-					Quantity = r.Quantity,
-					PickupTime = r.PickupTime,
-					Status = r.Status
-				};
-			}));
+			response.AddRange(reservations.Select(r => r.ToDto()));
 
 			return response;
 		}
