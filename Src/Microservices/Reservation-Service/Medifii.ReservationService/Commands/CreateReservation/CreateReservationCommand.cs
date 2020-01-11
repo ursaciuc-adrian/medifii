@@ -1,8 +1,8 @@
-﻿using MediatR;
+﻿using System;
+using MediatR;
 using Medifii.ReservationService.Dtos;
-using System;
 
-namespace Medifii.ReservationService.Commands
+namespace Medifii.ReservationService.Commands.CreateReservation
 {
 	public class CreateReservationCommand : IRequest<ReservationDto>
 	{

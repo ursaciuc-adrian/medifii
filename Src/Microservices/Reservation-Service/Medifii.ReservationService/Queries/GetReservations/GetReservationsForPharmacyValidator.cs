@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Medifii.ReservationService.Queries
+namespace Medifii.ReservationService.Queries.GetReservations
 {
 	public class GetReservationsForPharmacyValidator : AbstractValidator<GetReservationsForPharmacyQuery>
 	{

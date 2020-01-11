@@ -1,11 +1,11 @@
 ﻿using MediatR;
 using Medifii.Common.DataAccess;
 using Medifii.ReservationService.Api.Context;
-using Medifii.ReservationService.Commands;
 using Medifii.ReservationService.Entities;
 using Medifii.ReservationService.Enums;
 using System.Threading;
 using System.Threading.Tasks;
+using Medifii.ReservationService.Commands.CompleteReservation;
 
 namespace Medifii.ReservationService.Api.Commands
 {

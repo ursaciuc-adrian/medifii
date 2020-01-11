@@ -4,11 +4,11 @@ using Medifii.ReservationService.Api.Context;
 using Medifii.ReservationService.Dtos;
 using Medifii.ReservationService.Entities;
 using Medifii.ReservationService.Mappers;
-using Medifii.ReservationService.Queries;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Medifii.ReservationService.Queries.GetReservations;
 
 namespace Medifii.ReservationService.Api.Queries
 {

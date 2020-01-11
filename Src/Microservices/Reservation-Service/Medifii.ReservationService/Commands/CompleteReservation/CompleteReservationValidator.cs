@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Medifii.ReservationService.Commands
+namespace Medifii.ReservationService.Commands.CompleteReservation
 {
 	public class CompleteReservationValidator : AbstractValidator<CompleteReservationCommand>
 	{

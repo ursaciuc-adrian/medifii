@@ -1,8 +1,10 @@
 ﻿using MediatR;
-using Medifii.ReservationService.Commands;
-using Medifii.ReservationService.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Medifii.ReservationService.Commands.CancelReservation;
+using Medifii.ReservationService.Commands.CompleteReservation;
+using Medifii.ReservationService.Commands.CreateReservation;
+using Medifii.ReservationService.Queries.GetReservations;
 
 namespace Medifii.ReservationService.Api.Controllers
 {

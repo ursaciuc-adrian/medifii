@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Medifii.ScraperService.Infrastructure.Dto;
-using Medifii.ScraperService.Models;
+using Medifii.ScraperService.Api.Models;
+using Medifii.ScraperService.Dto;
 
-namespace Medifii.ScraperService.Profiles
+namespace Medifii.ScraperService.Api.Profiles
 {
 	public class ProductProfile : Profile
 	{

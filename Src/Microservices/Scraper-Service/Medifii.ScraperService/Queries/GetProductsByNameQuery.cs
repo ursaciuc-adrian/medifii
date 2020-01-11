@@ -1,8 +1,8 @@
-﻿using MediatR;
-using Medifii.ScraperService.Infrastructure.Dto;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using MediatR;
+using Medifii.ScraperService.Dto;
 
-namespace Medifii.ScraperService.Infrastructure.Queries
+namespace Medifii.ScraperService.Queries
 {
 	public class GetProductsByNameQuery : IRequest<IEnumerable<ProductDto>>
 	{

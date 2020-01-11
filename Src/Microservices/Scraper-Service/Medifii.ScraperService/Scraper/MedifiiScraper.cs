@@ -1,8 +1,8 @@
-﻿using HtmlAgilityPack;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using HtmlAgilityPack;
 
-namespace Medifii.ScraperService.Infrastructure.Scraper
+namespace Medifii.ScraperService.Scraper
 {
 	public class MedifiiScraper<T>
 		where T : class

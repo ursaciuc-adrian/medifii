@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Medifii.ScraperService
+namespace Medifii.ScraperService.Api
 {
 	public class Program
 	{

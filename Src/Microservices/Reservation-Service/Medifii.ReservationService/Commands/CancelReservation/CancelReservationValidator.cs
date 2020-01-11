@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Medifii.ReservationService.Commands
+namespace Medifii.ReservationService.Commands.CancelReservation
 {
 	public class CancelReservationValidator : AbstractValidator<CancelReservationCommand>
 	{

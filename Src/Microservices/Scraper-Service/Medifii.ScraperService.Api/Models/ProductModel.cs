@@ -1,8 +1,8 @@
-﻿using Medifii.ScraperService.Models.Enums;
+﻿using Medifii.ScraperService.Api.Models.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Medifii.ScraperService.Models
+namespace Medifii.ScraperService.Api.Models
 {
 	public class ProductModel
 	{
