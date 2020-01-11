@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Medifii.AuthService
+namespace Medifii.AuthService.Api
 {
 	public class Program
 	{

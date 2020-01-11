@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ApiGateway", "Src\Gateways\WebApi-Gateway\Medifii.ApiGateway.csproj", "{4A47470B-EC25-458B-853A-943B9DC75226}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.AuthService", "Src\Microservices\Auth-Service\Medifii.AuthService\Medifii.AuthService.csproj", "{5275364F-01A4-4F74-B780-7C470C254404}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.AuthService.Api", "Src\Microservices\Auth-Service\Medifii.AuthService.Api\Medifii.AuthService.Api.csproj", "{5275364F-01A4-4F74-B780-7C470C254404}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{7581CA23-8E79-4E18-A02A-E3715C6B0609}"
 EndProject
@@ -79,7 +79,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.ReservationService"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{9EC6D17C-0D1F-43F9-87E9-9B4D77571809}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.Common.DataAccess", "Src\Microservices\Common\Medifii.Common.DataAccess\Medifii.Common.DataAccess.csproj", "{D3035B80-1E24-4CDE-85E5-D10355ABD94A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.Common.DataAccess", "Src\Microservices\Common\Medifii.Common.DataAccess\Medifii.Common.DataAccess.csproj", "{D3035B80-1E24-4CDE-85E5-D10355ABD94A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.AuthService", "Src\Microservices\Auth-Service\Medifii.AuthService\Medifii.AuthService.csproj", "{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -355,6 +357,18 @@ Global
 		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Release|x64.Build.0 = Release|Any CPU
 		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Release|x86.ActiveCfg = Release|Any CPU
 		{D3035B80-1E24-4CDE-85E5-D10355ABD94A}.Release|x86.Build.0 = Release|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Debug|x64.Build.0 = Debug|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Debug|x86.Build.0 = Debug|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|x64.ActiveCfg = Release|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|x64.Build.0 = Release|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|x86.ActiveCfg = Release|Any CPU
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -397,6 +411,7 @@ Global
 		{A56AE0D0-A100-4935-9361-9DEFE6421DE2} = {64BA40C5-495B-4CD5-A015-4A2504208273}
 		{9EC6D17C-0D1F-43F9-87E9-9B4D77571809} = {402CFAF7-3F43-4E1B-A7B2-B49A2AED8289}
 		{D3035B80-1E24-4CDE-85E5-D10355ABD94A} = {9EC6D17C-0D1F-43F9-87E9-9B4D77571809}
+		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709} = {36003DD3-6E91-4B7C-B7EF-70D735FAADAD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {340D722A-CF5F-4062-9087-9C30A3F79CDA}
