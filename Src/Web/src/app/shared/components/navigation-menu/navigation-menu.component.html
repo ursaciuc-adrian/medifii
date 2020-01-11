@@ -1,0 +1,54 @@
+<mat-toolbar *ngIf="isAuthenticated()" color="primary" class="medifii-nav-bar">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="toolbar-title">Medifii</span>
+        <div fxFlex fxLayout fxLayoutAlign="flex-end">
+            <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+                <li fxHide.xs>
+                    <button mat-icon-button>
+                        <mat-icon>settings</mat-icon>
+                    </button>
+                </li>
+                <li fxHide.xs>
+                    <button mat-icon-button>
+                        <mat-icon>help_outline</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-icon-button [matMenuTriggerFor]="auth">
+                        <mat-icon>person_outline</mat-icon>
+                    </button>
+                    <mat-menu #auth="matMenu">
+                        <button mat-menu-item (click)="logout()">
+                            <mat-icon>exit_to_app</mat-icon>
+                            <span>Sign out</span>
+                        </button>
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container autosize>
+    <mat-sidenav #sidenav mode="over" role="navigation">
+        <mat-nav-list>
+            <ng-container>
+            <h2 matSubheader>Menu</h2>
+            <a mat-list-item [routerLink]="'/map'">
+                <mat-icon matListIcon class="nav-list-icon">explore</mat-icon>
+                Map
+            </a>
+            <a mat-list-item [routerLink]="'/products'">
+                <mat-icon matListIcon class="nav-list-icon">shopping_basket</mat-icon>
+                Products
+            </a>
+            </ng-container>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content role="main">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
