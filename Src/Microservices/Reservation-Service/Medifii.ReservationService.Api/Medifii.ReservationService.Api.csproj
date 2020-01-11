@@ -18,7 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Medifii.ReserveService\Medifii.ReservationService.csproj" />
+    <ProjectReference Include="..\..\Common\Medifii.Common.DataAccess\Medifii.Common.DataAccess.csproj" />
+    <ProjectReference Include="..\Medifii.ReservationService\Medifii.ReservationService.csproj" />
   </ItemGroup>
 
 
