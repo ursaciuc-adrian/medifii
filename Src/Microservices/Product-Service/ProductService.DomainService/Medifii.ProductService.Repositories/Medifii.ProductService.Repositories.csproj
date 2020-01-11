@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\ProductService.DomainModel\Medifii.ProductService.Data\Medifii.ProductService.Data.csproj" />
     <ProjectReference Include="..\..\ProductService.DomainModel\Medifii.ProductService.Persistance\Medifii.ProductService.Persistence.csproj" />
   </ItemGroup>
