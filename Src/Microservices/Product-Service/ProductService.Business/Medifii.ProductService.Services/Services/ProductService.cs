@@ -81,9 +81,9 @@ namespace Medifii.ProductService.Services.Services
             return product.Update(productModel.Name, 
                                     productModel.Description, 
                                     productModel.Price,
-                                    product.Quantity,
-                                    product.ExpiryDate,
-                                    product.Availability)
+                                    productModel.Quantity,
+                                    productModel.ExpiryDate,
+                                    productModel.Availability)
                 .Map(() => product);
         }
     }
