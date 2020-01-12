@@ -37,6 +37,10 @@
         <mat-nav-list>
             <ng-container>
             <h2 matSubheader>Menu</h2>
+            <a mat-list-item [routerLink]="'/app/home'">
+                <mat-icon matListIcon class="nav-list-icon">search</mat-icon>
+                Home
+            </a>
             <a mat-list-item [routerLink]="'/map'">
                 <mat-icon matListIcon class="nav-list-icon">explore</mat-icon>
                 Map
