@@ -1,21 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { LoginService } from '../../services/login.service'
 
 @Component({
   selector: 'app-navigation-menu',
   templateUrl: './navigation-menu.component.html',
-  styleUrls: ['./navigation-menu.component.scss']
+  styleUrls: ['./navigation-menu.component.scss'],
 })
 export class NavigationMenuComponent implements OnInit {
-  constructor() { }
-
-  ngOnInit() {
+  loggedIn
+  constructor(private loginService: LoginService) {
+    this.loggedIn = loginService.isAuthenticated();
   }
 
-  isAuthenticated(): boolean {
-    return true;
-  }
+  ngOnInit() {}
 
   logout(): void {
-    console.log('Should log out!');
+    this.loginService.logout();
   }
 }

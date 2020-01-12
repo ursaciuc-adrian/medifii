@@ -51,10 +51,7 @@
         <mat-form-field>
           <mat-label>Your pharmacy</mat-label>
           <select matNativeControl required ngModel name="pharmacyId">
-            <option value="9afda428-5204-4060-a286-6a51eb92174b">Catena</option>
-            <option value="2">Balena</option>
-            <option value="3">Buena</option>
-            <option value="4">Caramea</option>
+            <option *ngFor="let pharmacy of pharmacies" [value]="pharmacy.id">{{pharmacy.name}}</option>
           </select>
           <mat-error
             *ngIf="registerForm.controls.pharmacyId?.hasError('required')"

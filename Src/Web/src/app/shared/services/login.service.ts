@@ -14,4 +14,18 @@ export class LoginService {
   register(model) {
     return this.http.post(`${this.loginEndpoint}/register`, model).toPromise()
   }
+
+  setSession(authResult) {
+    localStorage.setItem('id_token', authResult.token)
+    window.location.reload()
+  }
+
+  logout() {
+    localStorage.removeItem('id_token')
+    window.location.reload()
+  }
+
+  isAuthenticated() {
+    return localStorage.getItem('id_token') != null ? true : false
+  }
 }
