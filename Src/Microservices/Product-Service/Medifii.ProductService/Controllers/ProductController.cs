@@ -38,7 +38,7 @@ namespace Medifii.ProductService.Controllers
         }
 
         // GET
-        [HttpGet]
+        [HttpGet("get")]
         public IActionResult GetAll()
         {
             var products = productService.GetAll();
@@ -46,7 +46,7 @@ namespace Medifii.ProductService.Controllers
         }
 
         // POST: api/Product
-        [HttpPost]
+        [HttpPost("create")]
         public IActionResult Post([FromBody] Product product)
         {
             var result = productService.Create(product);
@@ -54,7 +54,7 @@ namespace Medifii.ProductService.Controllers
         }
 
         // PUT: api/Product/5
-        [HttpPut("{id}")]
+        [HttpPut("update/{id}")]
         public IActionResult Put(Guid id, [FromBody] Product product)
         {
             var result = productService.Update(id, product);
@@ -62,7 +62,7 @@ namespace Medifii.ProductService.Controllers
         }
 
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public IActionResult Delete(Guid id)
         {
             var result = productService.Delete(id);
