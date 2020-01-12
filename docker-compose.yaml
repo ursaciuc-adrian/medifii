@@ -1,7 +1,7 @@
 version: "3"
 services:
     webapi-gateway:
-        image: medifii/webapi-gateway:latest
+        image: ursaciucadrian/webapi-gateway:latest
         restart: always
         build:
             context: .
@@ -14,7 +14,7 @@ services:
             - 7000:80
 
     auth-service-api:
-        image: medifii/auth-service-api:latest
+        image: ursaciucadrian/auth-service-api:latest
         restart: always
         build:
             context: .
@@ -27,7 +27,7 @@ services:
             - 7001:80
 
     pharmacy-service-api:
-        image: medifii/pharmacy-service-api:latest
+        image: ursaciucadrian/pharmacy-service-api:latest
         restart: always
         build:
             context: .
@@ -40,7 +40,7 @@ services:
             - 7002:80
 
     product-service-api:
-        image: medifii/product-service-api:latest
+        image: ursaciucadrian/product-service-api:latest
         restart: always
         build:
             context: .
@@ -53,7 +53,7 @@ services:
             - 7003:80
 
     reservation-service-api:
-        image: medifii/reservation-service-api:latest
+        image: ursaciucadrian/reservation-service-api:latest
         restart: always
         build:
             context: .
@@ -66,7 +66,7 @@ services:
             - 7004:80
 
     request-service-api:
-        image: medifii/request-service-api:latest
+        image: ursaciucadrian/request-service-api:latest
         restart: always
         build:
             context: .
@@ -79,7 +79,7 @@ services:
             - 7005:80
 
     scraper-service-api:    
-        image: medifii/scraper-service-api:latest
+        image: ursaciucadrian/scraper-service-api:latest
         restart: always
         build:
             context: .
@@ -92,7 +92,7 @@ services:
             - 7006:80
 
     search-service-api:
-        image: medifii/search-service-api:latest
+        image: ursaciucadrian/search-service-api:latest
         restart: always
         build:
             context: .
