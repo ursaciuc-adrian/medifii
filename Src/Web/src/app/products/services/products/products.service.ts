@@ -22,6 +22,10 @@ export class ProductsService {
     return this.http.post(`${this.requestEndpoint}/create`, request).toPromise();
   }
 
+  resolveRequest(id){
+    return this.http.put(`${this.requestEndpoint}/resolve/${id}`,{}).toPromise();
+  }
+
   addReserve(reserve): Observable<any> {
     return this.http.post(`${this.reserveEndpoint}/create`, reserve);
   }
