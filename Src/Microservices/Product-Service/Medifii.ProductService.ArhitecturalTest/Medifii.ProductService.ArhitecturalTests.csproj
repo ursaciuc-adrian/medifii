@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="NetArchTest.Rules" Version="1.2.3" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="coverlet.collector" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Medifii.ProductService\Medifii.ProductService.csproj" />
+    <ProjectReference Include="..\ProductService.Business\Medifii.ProductService.Services\Medifii.ProductService.Services.csproj" />
+    <ProjectReference Include="..\ProductService.DomainModel\Medifii.ProductService.Data\Medifii.ProductService.Data.csproj" />
+    <ProjectReference Include="..\ProductService.DomainModel\Medifii.ProductService.Persistance\Medifii.ProductService.Persistence.csproj" />
+    <ProjectReference Include="..\ProductService.DomainService\Medifii.ProductService.Repositories\Medifii.ProductService.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>

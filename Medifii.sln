@@ -87,15 +87,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RequestService.DomainModel"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RequestService.DomainService", "RequestService.DomainService", "{967E7A34-1FB0-438B-9F05-C501C72F18C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.RequestService.Services", "Src\Microservices\Request-Service\Medifii.RequestService.Business\Medifii.RequestService.Serices\Medifii.RequestService.Services.csproj", "{00909A98-A72A-47D8-B481-9D592365C925}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.RequestService.Services", "Src\Microservices\Request-Service\Medifii.RequestService.Business\Medifii.RequestService.Serices\Medifii.RequestService.Services.csproj", "{00909A98-A72A-47D8-B481-9D592365C925}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.RequestService.Data", "Src\Microservices\Request-Service\Medifii.RequestService.DomainModel\Medifii.RequestService.Data\Medifii.RequestService.Data.csproj", "{BCAAAAE6-2156-47BD-AEA1-4C66BE3387E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.RequestService.Data", "Src\Microservices\Request-Service\Medifii.RequestService.DomainModel\Medifii.RequestService.Data\Medifii.RequestService.Data.csproj", "{BCAAAAE6-2156-47BD-AEA1-4C66BE3387E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.RequestService.Persistence", "Src\Microservices\Request-Service\Medifii.RequestService.DomainModel\Medifii.RequestService.Persistence\Medifii.RequestService.Persistence.csproj", "{7584585B-3DEB-4939-934F-47E951FA3A5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.RequestService.Persistence", "Src\Microservices\Request-Service\Medifii.RequestService.DomainModel\Medifii.RequestService.Persistence\Medifii.RequestService.Persistence.csproj", "{7584585B-3DEB-4939-934F-47E951FA3A5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.RequestService.Repositories", "Src\Microservices\Request-Service\Medifii.RequestService.DomainService\Medifii.RequestService.Repositories\Medifii.RequestService.Repositories.csproj", "{F755AFDD-3BAE-4169-B8EB-FBBCCB638747}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.RequestService.Repositories", "Src\Microservices\Request-Service\Medifii.RequestService.DomainService\Medifii.RequestService.Repositories\Medifii.RequestService.Repositories.csproj", "{F755AFDD-3BAE-4169-B8EB-FBBCCB638747}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medifii.AuthService", "Src\Microservices\Auth-Service\Medifii.AuthService\Medifii.AuthService.csproj", "{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medifii.ProductService.ArhitecturalTests", "Src\Microservices\Product-Service\Medifii.ProductService.ArhitecturalTest\Medifii.ProductService.ArhitecturalTests.csproj", "{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -431,6 +433,18 @@ Global
 		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|x64.Build.0 = Release|Any CPU
 		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|x86.ActiveCfg = Release|Any CPU
 		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709}.Release|x86.Build.0 = Release|Any CPU
+		{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1}.Debug|x64.Build.0 = Debug|Any CPU
+		{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1}.Debug|x86.Build.0 = Debug|Any CPU
+		{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1}.Release|x64.ActiveCfg = Release|Any CPU
+		{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1}.Release|x64.Build.0 = Release|Any CPU
+		{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1}.Release|x86.ActiveCfg = Release|Any CPU
+		{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -481,6 +495,7 @@ Global
 		{7584585B-3DEB-4939-934F-47E951FA3A5F} = {1CC2360D-0E48-43FC-AADF-4E9ACEDE8A66}
 		{F755AFDD-3BAE-4169-B8EB-FBBCCB638747} = {967E7A34-1FB0-438B-9F05-C501C72F18C1}
 		{88DC299F-2BA7-4E2A-9E91-D72A3AAE9709} = {36003DD3-6E91-4B7C-B7EF-70D735FAADAD}
+		{37EF3FC5-5B4C-49A9-BF6B-301BC882EBB1} = {AEDF8A24-C7A2-4442-AF29-26CD74CE5452}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {340D722A-CF5F-4062-9087-9C30A3F79CDA}
