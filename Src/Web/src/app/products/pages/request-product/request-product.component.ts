@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { ProductsService } from '../../services/products/products.service';
+import { MatSnackBar, MatDialogRef } from '@angular/material';
+import { PharmacyService } from 'src/app/shared/services/pharmacy.service';
 
 @Component({
   selector: 'app-request-product',
@@ -8,7 +11,12 @@ import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/fo
 })
 export class RequestProductComponent implements OnInit {
   private requestForm: FormGroup = new FormGroup({});
-  constructor(private fb: FormBuilder) { }
+  pharmacies = [];
+  constructor(private fb: FormBuilder, private productsService: ProductsService, private snackBar: MatSnackBar, private pharmacyService: PharmacyService, private dialogRef: MatDialogRef<RequestProductComponent>) { 
+    this.pharmacyService.getAllPharmacies().then((rsp: any)=>{
+      this.pharmacies = rsp
+    })
+  }
 
   ngOnInit() {
     this.createForm();
@@ -16,13 +24,19 @@ export class RequestProductComponent implements OnInit {
 
   createForm(): void {
     this.requestForm = this.fb.group({
+      pharmacyId: ['',[Validators.required]],
       name: ['', [Validators.required]],
       quantity: ['', [Validators.required, Validators.min(1)]],
     });
   }
 
   submit(): void {
-    console.log(this.requestForm.value);
+    this.productsService.addRequest(this.requestForm.value).then((rsp)=>{
+      this.showMessage('Request added succesfully!');
+      this.dialogRef.close();
+    },(err)=>{
+      this.showMessage('Something went wrong.');
+    });
   }
 
   get name(): AbstractControl {
@@ -31,6 +45,14 @@ export class RequestProductComponent implements OnInit {
 
   get quantity(): AbstractControl {
     return this.requestForm.get('quantity');
+  }
+
+  showMessage(message): void {
+    this.snackBar.open(message, 'x', {
+      duration: 2000,
+      verticalPosition: 'top',
+      horizontalPosition: 'right',
+    })
   }
 
 }
