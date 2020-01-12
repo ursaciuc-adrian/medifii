@@ -1,0 +1,22 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine AS build
+WORKDIR /app
+EXPOSE 80
+
+
+WORKDIR /Src
+COPY ["Src/Microservices/Reservation-Service/Medifii.ReservationService/Medifii.ReservationService.csproj", "Src/Microservices/Reservation-Service/Medifii.ReservationService/"]
+
+RUN dotnet restore "Src/Microservices/Reservation-Service/Medifii.ReservationService.Api/Medifii.ReservationService.Api.csproj"
+
+COPY . .
+
+WORKDIR "/src/Src/Microservices/Reservation-Service/Medifii.ReservationService.Api"
+RUN dotnet build "Medifii.ReservationService.Api.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Medifii.ReservationService.Api.csproj" -c Release -o /app/publish
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine AS runtime
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ["dotnet", "Medifii.ReservationService.dll"]

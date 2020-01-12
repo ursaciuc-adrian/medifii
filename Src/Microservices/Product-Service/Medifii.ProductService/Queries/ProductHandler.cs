@@ -3,8 +3,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using Medifii.ProductService.Repositories.Models;
-using Medifii.ProductService.Repositories.Queries;
 using Medifii.ProductService.Repositories.ServiceInterfaces;
+using Medifii.ProductService.Services.Queries;
 
 namespace Medifii.ProductService.Queries
 {

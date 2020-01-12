@@ -7,8 +7,8 @@ namespace Medifii.ReservationService.Api.Context
 	{
 		public ReservationsContext(DbContextOptions options) 
 			: base(options) 
-		{ 
-
+		{
+			Database.EnsureCreated();
 		}
 
 		public DbSet<Reservation> Reservations { get; set; }

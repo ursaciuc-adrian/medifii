@@ -1,0 +1,30 @@
+version: "3"
+services:
+    webapi-gateway:
+        image: medifii/webapi-gateway:latest
+        restart: always
+        build:
+            context: .
+            dockerfile: Src/Gateways/WebApi-Gateway/Dockerfile
+        depends_on:
+            - reservation-service-api
+
+    reservation-service-api:
+        image: medifii/reservation-service-api:latest
+        restart: always
+        build:
+            context: .
+            dockerfile: Src/Microservices/Reservation-Service/Medifii.ReservationService.Api/Dockerfile
+        ports:
+            - "8000:80"
+        depends_on:
+            - sqlserver
+
+    sqlserver:
+        image: "mcr.microsoft.com/mssql/server"
+        restart: always
+        environment:
+            SA_PASSWORD: "Pass123!"
+            ACCEPT_EULA: "Y"
+        ports:
+            - 1433:1433
