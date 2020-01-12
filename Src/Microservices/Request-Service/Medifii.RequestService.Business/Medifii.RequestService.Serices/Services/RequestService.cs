@@ -41,7 +41,7 @@ namespace Medifii.RequestService.Services.Services
 
         private Result<Entities.Request> CreateRequest(Request request)
         {
-            return Entities.Request.Create(request.PharmacyId, request.ProductName, request.UserId, request.Quantity)
+            return Entities.Request.Create(request.PharmacyId, request.ProductName, request.Quantity)
                 .Tap(requestModel => _requestRepository.MakeRequest(requestModel))
                 .Tap(_ => _requestRepository.SaveChanges());
         }

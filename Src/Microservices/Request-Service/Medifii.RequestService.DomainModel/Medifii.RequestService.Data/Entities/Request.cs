@@ -10,14 +10,12 @@ namespace Medifii.RequestService.Data.Entities
             Guid id, 
             Guid pharmacyId, 
             Name productName,
-            Guid userId,
             bool resolvedStatus,
             int quantity)
         {
             Id = id;
             PharmacyId = pharmacyId;
             ProductName = productName;
-            UserId = userId;
             ResolvedStatus = resolvedStatus;
             Quantity = quantity;
         }
@@ -30,8 +28,6 @@ namespace Medifii.RequestService.Data.Entities
 
         public Name ProductName { get; set; }
 
-        public Guid UserId { get; set; }
-
         public bool ResolvedStatus { get; set; }
 
         public int Quantity { get; set; }
@@ -39,14 +35,13 @@ namespace Medifii.RequestService.Data.Entities
         public static Result<Request> Create(
             Guid pharmacyId, 
             string productName, 
-            Guid userId,
             int quantity)
         {
             var id = Guid.NewGuid();
             var productNameResult = Name.Create(productName);
 
             return Result.Combine(productNameResult).Map(() => 
-                new Request(id, pharmacyId, productNameResult.Value, userId, false, quantity));
+                new Request(id, pharmacyId, productNameResult.Value, false, quantity));
         }
 
         public Result Update(Guid pharmacyId, string productName, bool resolvedStatus, int quantity)
