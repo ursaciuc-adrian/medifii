@@ -13,11 +13,11 @@ export class ProductsService {
     private _snackBar: MatSnackBar) { }
 
   getAllProducts(): Observable<any> {
-    return this.http.get(`${this.productsEndpoint}`);
+    return this.http.get(`${this.productsEndpoint}/get`);
   }
 
   addProduct(product: Product): Observable<any> {
-    return this.http.post(`${this.productsEndpoint}`, product);
+    return this.http.post(`${this.productsEndpoint}/create`, product);
   }
 
   getProduct(productId: string): Observable<any> {
@@ -25,11 +25,11 @@ export class ProductsService {
   }
 
   updateProduct(product: Product): Observable<any> {
-    return this.http.put(`${this.productsEndpoint}/${product.id}`, product);
+    return this.http.put(`${this.productsEndpoint}/update/${product.id}`, product);
   }
 
   deleteProduct(productId): Observable<any> {
-    return this.http.delete(`${this.productsEndpoint}/${productId}`);
+    return this.http.delete(`${this.productsEndpoint}/delete/${productId}`);
   }
 
   showMessage(message): void {

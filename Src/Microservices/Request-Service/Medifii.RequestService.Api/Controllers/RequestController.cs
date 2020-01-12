@@ -18,7 +18,7 @@ namespace Medifii.RequestService.Api.Controllers
             _requestService = requestService;
         }
 
-        [HttpGet]
+        [HttpGet("get")]
         public IActionResult GetAll()
         {
             var result = _requestService.GetAll();
@@ -26,7 +26,7 @@ namespace Medifii.RequestService.Api.Controllers
         }
 
         // POST: api/Pharmacy
-        [HttpPost]
+        [HttpPost("create")]
         public IActionResult CreateRequest([FromBody] Request pharmacy)
         {
             var result = _requestService.MakeRequest(pharmacy);
@@ -34,7 +34,7 @@ namespace Medifii.RequestService.Api.Controllers
         }
 
         // PUT: api/Pharmacy/5
-        [HttpPut("{id}")]
+        [HttpPut("resolve/{id}")]
         public IActionResult Put(Guid id)
         {
             var result = _requestService.ResolveRequest(id);
