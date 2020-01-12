@@ -8,6 +8,49 @@ services:
             dockerfile: Src/Gateways/WebApi-Gateway/Dockerfile
         depends_on:
             - reservation-service-api
+        environment:
+            - ASPNETCORE_ENVIRONMENT=production
+        ports:
+            - 7000:80
+
+    auth-service-api:
+        image: medifii/auth-service-api:latest
+        restart: always
+        build:
+            context: .
+            dockerfile: Src/Microservices/Auth-Service/Medifii.AuthService.Api/Dockerfile
+        depends_on:
+            - sqlserver
+        environment:
+            - ASPNETCORE_ENVIRONMENT=production
+        ports:
+            - 7001:80
+
+    pharmacy-service-api:
+        image: medifii/pharmacy-service-api:latest
+        restart: always
+        build:
+            context: .
+            dockerfile: Src/Microservices/Pharmacy-Service/Medifii.PharmacyService/Dockerfile
+        depends_on:
+            - sqlserver
+        environment:
+            - ASPNETCORE_ENVIRONMENT=production
+        ports:
+            - 7002:80
+
+    product-service-api:
+        image: medifii/product-service-api:latest
+        restart: always
+        build:
+            context: .
+            dockerfile: Src/Microservices/Product-Service/Medifii.ProductService/Dockerfile
+        depends_on:
+            - sqlserver
+        environment:
+            - ASPNETCORE_ENVIRONMENT=production
+        ports:
+            - 7003:80
 
     reservation-service-api:
         image: medifii/reservation-service-api:latest
@@ -15,10 +58,51 @@ services:
         build:
             context: .
             dockerfile: Src/Microservices/Reservation-Service/Medifii.ReservationService.Api/Dockerfile
-        ports:
-            - "8000:80"
         depends_on:
             - sqlserver
+        environment:
+            - ASPNETCORE_ENVIRONMENT=production
+        ports:
+            - 7004:80
+
+    request-service-api:
+        image: medifii/request-service-api:latest
+        restart: always
+        build:
+            context: .
+            dockerfile: Src/Microservices/Request-Service/Medifii.RequestService.Api/Dockerfile
+        depends_on:
+            - sqlserver
+        environment:
+            - ASPNETCORE_ENVIRONMENT=production
+        ports:
+            - 7005:80
+
+    scraper-service-api:    
+        image: medifii/scraper-service-api:latest
+        restart: always
+        build:
+            context: .
+            dockerfile: Src/Microservices/Scraper-Service/Medifii.ScraperService.Api/Dockerfile
+        depends_on:
+            - sqlserver
+        environment:
+            - ASPNETCORE_ENVIRONMENT=production
+        ports:
+            - 7006:80
+
+    search-service-api:
+        image: medifii/search-service-api:latest
+        restart: always
+        build:
+            context: .
+            dockerfile: Src/Microservices/Search-Service/Medifii.SearchService.Api/Dockerfile
+        depends_on:
+            - sqlserver
+        environment:
+            - ASPNETCORE_ENVIRONMENT=production
+        ports:
+            - 7007:80
 
     sqlserver:
         image: "mcr.microsoft.com/mssql/server"
