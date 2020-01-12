@@ -23,6 +23,11 @@ export const APP_ROUTES: Routes = [
         canActivate: [AuthGuard],
     },
     {
+        path: 'requests',
+        loadChildren: () => import('../requests/requests.module').then(m => m.RequestsModule),
+        canActivate: [AuthGuard],
+    },
+    {
         path: '',
         redirectTo: 'app',
         pathMatch: 'full'

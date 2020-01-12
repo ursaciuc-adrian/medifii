@@ -25,13 +25,13 @@ export class RequestProductComponent implements OnInit {
   createForm(): void {
     this.requestForm = this.fb.group({
       pharmacyId: ['',[Validators.required]],
-      name: ['', [Validators.required]],
+      productName: ['', [Validators.required]],
       quantity: ['', [Validators.required, Validators.min(1)]],
     });
   }
 
   submit(): void {
-    this.productsService.addRequest(this.requestForm.value).then((rsp)=>{
+    this.productsService.addRequest({...this.requestForm.value, resolvedStatus: false}).then((rsp)=>{
       this.showMessage('Request added succesfully!');
       this.dialogRef.close();
     },(err)=>{

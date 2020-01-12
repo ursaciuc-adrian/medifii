@@ -25,6 +25,9 @@ export class ProductsService {
   addReserve(reserve): Observable<any> {
     return this.http.post(`${this.reserveEndpoint}/create`, reserve);
   }
+  getAllRequests() {
+    return this.http.get(`${this.requestEndpoint}/get`);
+  }
 
   addProduct(product: Product): Observable<any> {
     return this.http.post(`${this.productsEndpoint}/create`, product);
