@@ -49,6 +49,10 @@
                 <mat-icon matListIcon class="nav-list-icon">shopping_basket</mat-icon>
                 Products
             </a>
+            <a *ngIf="loggedIn != 2" mat-list-item [routerLink]="'/requests'" (click)="sidenav.close()">
+                <mat-icon matListIcon class="nav-list-icon">shopping_basket</mat-icon>
+                Requests
+            </a>
             </ng-container>
         </mat-nav-list>
     </mat-sidenav>

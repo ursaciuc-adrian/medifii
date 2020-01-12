@@ -4,14 +4,16 @@ using Medifii.RequestService.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Medifii.RequestService.Persistence.Migrations
 {
     [DbContext(typeof(RequestContext))]
-    partial class RequestContextModelSnapshot : ModelSnapshot
+    [Migration("20200112191937_RemoveUserId")]
+    partial class RemoveUserId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
