@@ -13,7 +13,8 @@ namespace Medifii.RequestService.Services.Mappers
                 PharmacyId = request.PharmacyId,
                 ProductName = request.ProductName,
                 ResolvedStatus = request.ResolvedStatus,
-                UserId = request.UserId
+                UserId = request.UserId,
+                Quantity = request.Quantity
             };
         }
     }
