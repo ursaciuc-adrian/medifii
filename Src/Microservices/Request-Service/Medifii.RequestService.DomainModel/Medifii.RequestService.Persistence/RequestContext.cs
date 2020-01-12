@@ -4,18 +4,19 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Medifii.RequestService.Persistence
 {
-    public class RequestContext : DbContext
-    {
-        public RequestContext(DbContextOptions<RequestContext> options) : base(options)
-        {
-        }
+	public class RequestContext : DbContext
+	{
+		public RequestContext(DbContextOptions<RequestContext> options) : base(options)
+		{
+			Database.EnsureCreated();
+		}
 
-        public DbSet<Request> Requests { get; set; }
+		public DbSet<Request> Requests { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            new RequestMapping().Configure(modelBuilder.Entity<Request>());
-        }
-    }
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
+		{
+			base.OnModelCreating(modelBuilder);
+			new RequestMapping().Configure(modelBuilder.Entity<Request>());
+		}
+	}
 }

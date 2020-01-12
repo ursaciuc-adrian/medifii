@@ -2,7 +2,7 @@
 using MediatR;
 using Medifii.ProductService.Repositories.Models;
 
-namespace Medifii.ProductService.Repositories.Queries
+namespace Medifii.ProductService.Services.Queries
 {
     public class GetProductByNameQuery : IRequest<IEnumerable<Product>>
     {
