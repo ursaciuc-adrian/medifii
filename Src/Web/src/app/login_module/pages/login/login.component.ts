@@ -14,7 +14,7 @@ import { LoginService } from 'src/app/shared/services/login.service'
 export class LoginComponent {
   pharmacies = []
   patient = false
-
+  selectedIndex = 0
   constructor(
     protected loginService: LoginService,
     private pharmacyService: PharmacyService,
@@ -62,7 +62,14 @@ export class LoginComponent {
     this.loginService
       .register(form.value)
       .then(rsp => {
-        console.log(rsp)
+        if (rsp) {
+          this.showMessage('Account created succesfully. Proceed to login.')
+          this.selectedIndex = 0;
+        } else {
+          this.showMessage(
+            'Something went wrong. Maybe try a more complex password? Remember to use numbers and special characters.'
+          )
+        }
       })
       .catch((err: HttpErrorResponse) => {
         this.showMessage(err.error.title)
