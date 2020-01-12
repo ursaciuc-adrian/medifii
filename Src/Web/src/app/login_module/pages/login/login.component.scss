@@ -9,6 +9,19 @@
   width: 100vw;
   max-width: 50rem;
 
+  .logo{
+    margin-right: 2rem;
+    align-self: flex-end;
+
+    font-size: 8vw;
+
+    span{
+      font-weight: bolder;
+      color: #00CFD0;
+    }
+    
+  }
+
   .login-tab-group {
     width: 100vw;
     max-width: 30rem;
@@ -17,6 +30,9 @@
         background: rgba(255, 255, 255, 0.8);
     }
 
+    .mat-tab-body{
+      width: 90%;
+  }
     .login,
     .signup {
       display: flex;

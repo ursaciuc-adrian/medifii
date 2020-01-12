@@ -1,8 +1,9 @@
 import { Component, ViewEncapsulation } from '@angular/core'
 import { FormControl, Validators, NgForm } from '@angular/forms'
-import { LoginService } from '../../services/login.service'
 import { MatSnackBar } from '@angular/material'
 import { HttpErrorResponse } from '@angular/common/http'
+import { PharmacyService } from 'src/app/shared/services/pharmacy.service'
+import { LoginService } from 'src/app/shared/services/login.service'
 
 @Component({
   selector: 'login-page',
@@ -11,16 +12,30 @@ import { HttpErrorResponse } from '@angular/common/http'
   encapsulation: ViewEncapsulation.None,
 })
 export class LoginComponent {
+  pharmacies = []
+  patient = false
+  selectedIndex = 0
   constructor(
-    private loginService: LoginService,
+    protected loginService: LoginService,
+    private pharmacyService: PharmacyService,
     private _snackBar: MatSnackBar
-  ) {}
+  ) {
+    this.pharmacyService.getAllPharmacies().then((rsp: any) => {
+      this.pharmacies = rsp
+    })
+  }
 
   login = (form: NgForm) => {
     this.loginService
       .login(form.value)
-      .then(rsp => {
-        console.log(rsp)
+      .then((rsp: any) => {
+        if (rsp.token) {
+          this.loginService.setSession(rsp)
+        } else {
+          this.showMessage(
+            'Something went wrong. Incorrect username or password.'
+          )
+        }
       })
       .catch((err: HttpErrorResponse) => {
         this.showMessage(err.error.title)
@@ -47,7 +62,14 @@ export class LoginComponent {
     this.loginService
       .register(form.value)
       .then(rsp => {
-        console.log(rsp)
+        if (rsp) {
+          this.showMessage('Account created succesfully. Proceed to login.')
+          this.selectedIndex = 0;
+        } else {
+          this.showMessage(
+            'Something went wrong. Maybe try a more complex password? Remember to use numbers and special characters.'
+          )
+        }
       })
       .catch((err: HttpErrorResponse) => {
         this.showMessage(err.error.title)
