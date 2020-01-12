@@ -7,6 +7,7 @@ import { ProductsService } from '../../services/products/products.service';
 import { ConfirmDialogComponent } from 'src/app/shared/components/confirm-dialog/confirm-dialog.component';
 import { ReserveProductComponent } from '../reserve-product/reserve-product.component';
 import * as moment from 'moment';
+import { LoginService } from 'src/app/shared/services/login.service';
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
@@ -19,7 +20,14 @@ export class ProductsListComponent implements OnInit {
   private dataSource: MatTableDataSource<Product>;
   constructor(public dialog: MatDialog,
     private productsService: ProductsService,
-    private _snackBar: MatSnackBar) { }
+    private _snackBar: MatSnackBar,
+    private loginService: LoginService) { 
+      if(this.loginService.isAuthenticated() == 2) {
+        this.isPharmacist = false;
+      } else {
+        this.isPharmacist = true;
+      }
+    }
 
   ngOnInit() {
     this.setDataSource();

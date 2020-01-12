@@ -13,9 +13,10 @@ import { LoginService } from 'src/app/shared/services/login.service'
 })
 export class LoginComponent {
   pharmacies = []
+  patient = false
 
   constructor(
-    private loginService: LoginService,
+    protected loginService: LoginService,
     private pharmacyService: PharmacyService,
     private _snackBar: MatSnackBar
   ) {
@@ -30,8 +31,10 @@ export class LoginComponent {
       .then((rsp: any) => {
         if (rsp.token) {
           this.loginService.setSession(rsp)
-        }else{
-          this.showMessage('Something went wrong. Incorrect username or password.')
+        } else {
+          this.showMessage(
+            'Something went wrong. Incorrect username or password.'
+          )
         }
       })
       .catch((err: HttpErrorResponse) => {

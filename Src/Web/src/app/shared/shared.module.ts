@@ -18,6 +18,7 @@ import {
   MatSidenavModule,
   MatToolbarModule,
   MatMenuModule,
+  MatSlideToggleModule,
 } from '@angular/material'
 import { MatListModule } from '@angular/material/list'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
@@ -57,6 +58,7 @@ import { LoginGuard } from './guards/login.guard'
     FlexLayoutModule,
     MatMenuModule,
     CommonModule,
+    MatSlideToggleModule,
   ],
   exports: [
     FormsModule,
@@ -79,6 +81,7 @@ import { LoginGuard } from './guards/login.guard'
     NavigationMenuComponent,
     FlexLayoutModule,
     CommonModule,
+    MatSlideToggleModule,
   ],
   providers: [HttpClient, PharmacyService, LoginService, AuthGuard, LoginGuard],
   bootstrap: [],

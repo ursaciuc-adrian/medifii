@@ -16,16 +16,25 @@ export class LoginService {
   }
 
   setSession(authResult) {
-    localStorage.setItem('id_token', authResult.token)
+    if (authResult) {
+      localStorage.setItem('id_token', authResult.token)
+    } else {
+      localStorage.setItem('normal_user', 'true')
+    }
     window.location.reload()
   }
 
   logout() {
     localStorage.removeItem('id_token')
+    localStorage.removeItem('normal_user')
     window.location.reload()
   }
 
   isAuthenticated() {
-    return localStorage.getItem('id_token') != null ? true : false
+    return localStorage.getItem('id_token') != null
+      ? true
+      : localStorage.getItem('normal_user') != null
+      ? 2
+      : false
   }
 }

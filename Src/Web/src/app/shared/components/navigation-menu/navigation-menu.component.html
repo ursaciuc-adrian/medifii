@@ -37,22 +37,22 @@
         <mat-nav-list>
             <ng-container>
             <h2 matSubheader>Menu</h2>
-            <a mat-list-item [routerLink]="'/app/home'">
+            <a mat-list-item [routerLink]="'/app/home'" (click)="sidenav.close()">
                 <mat-icon matListIcon class="nav-list-icon">search</mat-icon>
                 Home
             </a>
-            <a mat-list-item [routerLink]="'/map'">
+            <a mat-list-item [routerLink]="'/map'" (click)="sidenav.close()">
                 <mat-icon matListIcon class="nav-list-icon">explore</mat-icon>
                 Map
             </a>
-            <a mat-list-item [routerLink]="'/products'">
+            <a mat-list-item [routerLink]="'/products'" (click)="sidenav.close()">
                 <mat-icon matListIcon class="nav-list-icon">shopping_basket</mat-icon>
                 Products
             </a>
             </ng-container>
         </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content role="main">
+    <mat-sidenav-content role="main" style="height: 100vh;">
         <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>
