@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using FluentAssertions;
+﻿using FluentAssertions;
 using NetArchTest.Rules;
 using Xunit;
 
@@ -19,6 +16,7 @@ namespace Medifii.ProductService.ArhitecturalTests
                 .HaveDependencyOn("Medifii.ProductService.Data")
                 .GetResult();
             result.IsSuccessful.Should().BeTrue();
+
         }
     }
 }
