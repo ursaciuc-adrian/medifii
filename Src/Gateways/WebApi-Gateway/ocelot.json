@@ -1,45 +1,84 @@
 {
-	"ReRoutes": [
-		{
-			"UpstreamPathTemplate": "/api/products/search/{name}",
-			"UpstreamHttpMethod": [ "GET" ],
+  "ReRoutes": [
+    {
+      "UpstreamPathTemplate": "/api/products/search/{name}",
+      "UpstreamHttpMethod": [ "GET" ],
 
-			"DownstreamPathTemplate": "/api/search/{name}",
-			"DownstreamScheme": "http",
-			"DownstreamHostAndPorts": [
-				{
-					"Host": "localhost",
-					"Port": 7040
-				}
-			]
-		},
-		{
-			"UpstreamPathTemplate": "/api/reservations/{everything}",
-			"UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/search/{name}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/reservations/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
 
-			"DownstreamPathTemplate": "/api/reservations/{everything}",
-			"DownstreamScheme": "http",
-			"DownstreamHostAndPorts": [
-				{
-					"Host": "localhost",
-					"Port": 7060
-				}
-			]
-		},
-		{
-			"UpstreamPathTemplate": "/api/auth/{everything}",
-			"UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/reservations/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7060
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/auth/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
 
-			"DownstreamPathTemplate": "/api/auth/{everything}",
-			"DownstreamScheme": "http",
-			"DownstreamHostAndPorts": [
-				{
-					"Host": "localhost",
-					"Port": 7010
-				}
-			]
-		}
-	],
+      "DownstreamPathTemplate": "/api/auth/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7010
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/request/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+
+      "DownstreamPathTemplate": "/api/request/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44388
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/product/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+
+      "DownstreamPathTemplate": "/api/product/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 50605
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/pharmacy/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+
+      "DownstreamPathTemplate": "/api/pharmacy/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51711
+        }
+      ]
+    }
+  ],
 	"GlobalConfiguration": {
 		"BaseUrl": "http://localhost:7000"
 	}
