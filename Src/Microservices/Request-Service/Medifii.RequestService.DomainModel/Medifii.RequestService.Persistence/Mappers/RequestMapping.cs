@@ -13,6 +13,7 @@ namespace Medifii.RequestService.Persistence.Mappers
             builder.OwnsOne(r => r.ProductName, prop => prop.Property(x => x.Value));
             builder.Property(r => r.UserId);
             builder.Property(r => r.ResolvedStatus);
+            builder.Property(r => r.Quantity);
         }
     }
 }
