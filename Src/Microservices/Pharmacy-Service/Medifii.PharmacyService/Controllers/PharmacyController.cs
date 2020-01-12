@@ -18,7 +18,7 @@ namespace Medifii.PharmacyService.Controllers
             this.pharmacyService = pharmacyService;
         }
 
-        [HttpGet]
+        [HttpGet("get")]
         public IActionResult GetAll()
         {
             var result = pharmacyService.GetAll();
@@ -26,7 +26,7 @@ namespace Medifii.PharmacyService.Controllers
         }
 
         // GET: api/Pharmacy/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("get/{id}", Name = "Get")]
         public IActionResult GetById(Guid id)
         {
             var result = pharmacyService.GetById(id);
@@ -34,7 +34,7 @@ namespace Medifii.PharmacyService.Controllers
         }
 
         // POST: api/Pharmacy
-        [HttpPost]
+        [HttpPost("create")]
         public IActionResult Post([FromBody] Pharmacy pharmacy)
         {
             var result = pharmacyService.Create(pharmacy);
@@ -42,7 +42,7 @@ namespace Medifii.PharmacyService.Controllers
         }
 
         // PUT: api/Pharmacy/5
-        [HttpPut("{id}")]
+        [HttpPut("update/{id}")]
         public IActionResult Put(Guid id, [FromBody] Pharmacy pharmacy)
         {
             var result = pharmacyService.Update(id, pharmacy);
@@ -50,7 +50,7 @@ namespace Medifii.PharmacyService.Controllers
         }
 
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public IActionResult Delete(Guid id)
         {
             var result = pharmacyService.Delete(id);

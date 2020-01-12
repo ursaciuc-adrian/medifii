@@ -64,6 +64,19 @@
           "Port": 50605
         }
       ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/pharmacy/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+
+      "DownstreamPathTemplate": "/api/pharmacy/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51711
+        }
+      ]
     }
   ],
 	"GlobalConfiguration": {
