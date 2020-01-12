@@ -21,6 +21,10 @@ export class ProductsService {
     return this.http.post(`${this.requestEndpoint}/create`, request).toPromise();
   }
 
+  getAllRequests(){
+    return this.http.get(`${this.requestEndpoint}/get`);
+  }
+
   addProduct(product: Product): Observable<any> {
     return this.http.post(`${this.productsEndpoint}/create`, product);
   }
