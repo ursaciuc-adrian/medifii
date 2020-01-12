@@ -49,6 +49,7 @@ export class ResolveRequest implements OnInit {
   resolve(id){
     this.productsService.resolveRequest(id).then((rsp)=>{
       this.productsService.showMessage('Request resolved succesfully!')
+      this.setDataSource();
     },(err)=>{
       this.productsService.showMessage('Something went wrong.')
     })
