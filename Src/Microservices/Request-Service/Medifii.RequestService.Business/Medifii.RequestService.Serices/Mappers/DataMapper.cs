@@ -9,6 +9,7 @@ namespace Medifii.RequestService.Services.Mappers
         {
             return new Request
             {
+                Id = request.Id,
                 PharmacyId = request.PharmacyId,
                 ProductName = request.ProductName,
                 ResolvedStatus = request.ResolvedStatus,

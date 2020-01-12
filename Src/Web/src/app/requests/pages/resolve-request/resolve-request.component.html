@@ -6,19 +6,23 @@
             </mat-form-field>
         </div>
         <table mat-table [dataSource]="dataSource">
-            <ng-container matColumnDef="name">
+            <ng-container matColumnDef="productName">
                 <th mat-header-cell *matHeaderCellDef>Product name</th>
-                <td mat-cell *matCellDef="let element">{{element.name}}</td>
+                <td mat-cell *matCellDef="let element">{{element.productName}}</td>
             </ng-container>
             <ng-container matColumnDef="quantity">
                 <th mat-header-cell *matHeaderCellDef>Quantity</th>
                 <td mat-cell *matCellDef="let element">{{element.quantity}}</td>
             </ng-container>
+            <ng-container matColumnDef="resolvedStatus">
+                <th mat-header-cell *matHeaderCellDef>Status</th>
+                <td mat-cell *matCellDef="let element"><mat-icon  [matTooltip]="element.resolvedStatus ? 'Solved!' : 'In pending'">{{element.resolvedStatus ? 'done' : 'report'}}</mat-icon></td>
+            </ng-container>
             <ng-container matColumnDef="actions">
                 <th mat-header-cell *matHeaderCellDef>Actions</th>
                 <td mat-cell *matCellDef="let element">
                     <div>
-                        <button mat-icon-button color="warn" matTooltip="Resolve request">
+                        <button mat-icon-button color="warn" matTooltip="Resolve request" (click)="resolve(element.id)">
                             <mat-icon>fast_forward</mat-icon>
                         </button>
                     </div>
