@@ -21,13 +21,13 @@ export class ProductsListComponent implements OnInit {
   constructor(public dialog: MatDialog,
     private productsService: ProductsService,
     private _snackBar: MatSnackBar,
-    private loginService: LoginService) { 
-      if(this.loginService.isAuthenticated() == 2) {
-        this.isPharmacist = false;
-      } else {
-        this.isPharmacist = true;
-      }
+    private loginService: LoginService) {
+    if (this.loginService.isAuthenticated() == 2) {
+      this.isPharmacist = false;
+    } else {
+      this.isPharmacist = true;
     }
+  }
 
   ngOnInit() {
     this.setDataSource();
@@ -88,6 +88,21 @@ export class ProductsListComponent implements OnInit {
 
   openReserveDialog(productId: string): void {
     const dialogRef = this.dialog.open(ReserveProductComponent, {});
+    dialogRef.afterClosed().subscribe(value => {
+      const dict = {
+        'productId': productId,
+        'pharmacyId': value.pharmacyId,
+        'quantity': value.quantity,
+        'pickupTime': value.pickupTime
+      };
+
+      this.productsService.addReserve(dict).subscribe(_ => {
+        this.showMessage('Request added succesfully!');
+      },
+        error => {
+          this.showMessage('Something went wrong.');
+        });
+    })
   }
 
   deleteProduct(product: Product): void {
@@ -107,8 +122,16 @@ export class ProductsListComponent implements OnInit {
     });
   }
 
+
+
   toggle(): void {
     this.isPharmacist = !this.isPharmacist;
   }
-
+  showMessage(message): void {
+    this._snackBar.open(message, 'x', {
+      duration: 2000,
+      verticalPosition: 'top',
+      horizontalPosition: 'right',
+    })
+  }
 }

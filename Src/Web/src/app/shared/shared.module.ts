@@ -19,6 +19,7 @@ import {
   MatToolbarModule,
   MatMenuModule,
   MatSlideToggleModule,
+  MatBottomSheetModule,
 } from '@angular/material'
 import { MatListModule } from '@angular/material/list'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
@@ -31,8 +32,9 @@ import { PharmacyService } from './services/pharmacy.service'
 import { LoginService } from './services/login.service'
 import { AuthGuard } from './guards/authentication.guard'
 import { LoginGuard } from './guards/login.guard'
+import { BottomInfoComponent } from './components/bottom-info/bottom-info.component'
 @NgModule({
-  declarations: [ConfirmDialogComponent, NavigationMenuComponent],
+  declarations: [ConfirmDialogComponent, NavigationMenuComponent, BottomInfoComponent],
   imports: [
     HttpClientModule,
     FormsModule,
@@ -59,6 +61,7 @@ import { LoginGuard } from './guards/login.guard'
     MatMenuModule,
     CommonModule,
     MatSlideToggleModule,
+    MatBottomSheetModule
   ],
   exports: [
     FormsModule,
@@ -82,8 +85,10 @@ import { LoginGuard } from './guards/login.guard'
     FlexLayoutModule,
     CommonModule,
     MatSlideToggleModule,
+    MatBottomSheetModule
   ],
   providers: [HttpClient, PharmacyService, LoginService, AuthGuard, LoginGuard],
   bootstrap: [],
+  entryComponents:[BottomInfoComponent]
 })
 export class SharedModule {}

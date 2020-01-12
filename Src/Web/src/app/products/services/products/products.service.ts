@@ -10,6 +10,7 @@ import { MatSnackBar } from '@angular/material';
 export class ProductsService {
   private productsEndpoint: string = '/api/Product';
   private requestEndpoint: string = '/api/Request';
+  private reserveEndpoint: string = '/api/Reservations';
   constructor(private http: HttpClient,
     private _snackBar: MatSnackBar) { }
 
@@ -21,7 +22,10 @@ export class ProductsService {
     return this.http.post(`${this.requestEndpoint}/create`, request).toPromise();
   }
 
-  getAllRequests(){
+  addReserve(reserve): Observable<any> {
+    return this.http.post(`${this.reserveEndpoint}/create`, reserve);
+  }
+  getAllRequests() {
     return this.http.get(`${this.requestEndpoint}/get`);
   }
 
